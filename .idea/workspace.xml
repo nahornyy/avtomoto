@@ -1,234 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a29f07e2-9189-4f6a-8a4f-9da3eeefc524" name="Changes" comment="почти финал">
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/archetypes/default.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/archetypes/default.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/_index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/_index.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/_index.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/masani/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/masani/_index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/masani/_index.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/masani/_index.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/peremogy/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/peremogy/_index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/peremogy/_index.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/peremogy/_index.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/peremogy/main.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/peremogy/main.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/rokoss/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/rokoss/_index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/rokoss/_index.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/classes/rokoss/_index.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/contact.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/contact.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/contact.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/contact.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/_index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/_index.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/docs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/docs.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/ipn.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/ipn.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/med.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/med.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/pass.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/pass.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/photo.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/docs/photo.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/news/shtrafy_2022.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/news/shtrafy_2022.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/news/shtrafy_2023.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/news/shtrafy_2023.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/registration.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/registration.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/services/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/services/_index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/gariga.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/gariga.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/gariga.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/gariga.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/ignatenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/ignatenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/kirichenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/kirichenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/kudrik.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/kudrik.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/lapa.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/lapa.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/lovakov.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/lovakov.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/miheenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/miheenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/rodinchenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/rodinchenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/uschenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/content/stuff/uschenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/hugo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/hugo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/i18n/ru.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/i18n/ru.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/i18n/uk.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/i18n/uk.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/booking/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/booking/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/categories/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/categories/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-prospekt-peremogy-39/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-prospekt-peremogy-39/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-prospekt-peremogy-39/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-prospekt-peremogy-39/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-prospekt-peremogy-39/main.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-prospekt-peremogy-39/main.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-krasnosilskogo-59a/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-krasnosilskogo-59a/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-krasnosilskogo-59a/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-krasnosilskogo-59a/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-rokosovskogo-51/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-rokosovskogo-51/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-rokosovskogo-51/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/classes/m-chernigiv-vul-rokosovskogo-51/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/ipn/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/med/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/pass/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/docs/photo/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/shtrafy_2022/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/shtrafy_2022/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/shtrafy_2023/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/news/shtrafy_2023/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/privacy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/privacy/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/registration/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/registration/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/booking/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/booking/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/categories/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/categories/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-prospekt-peremogy-39/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-prospekt-peremogy-39/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-prospekt-peremogy-39/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-prospekt-peremogy-39/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-krasnosilskogo-59a/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-krasnosilskogo-59a/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-krasnosilskogo-59a/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-krasnosilskogo-59a/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-rokosovskogo-51/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-rokosovskogo-51/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-rokosovskogo-51/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/classes/m-chernigiv-vul-rokosovskogo-51/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/ipn/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/med/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/pass/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/docs/photo/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/news/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/news/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/news/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/news/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/privacy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/privacy/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/classes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/classes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/drivers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/drivers/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/program/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/services/program/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/stuff/garyga-anastasiya-sergiyivna/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/stuff/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/stuff/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/stuff/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/stuff/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/tags/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/tags/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/ru/tags/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/garyga-anastasiya-sergiyivna/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/garyga-anastasiya-sergiyivna/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/gusev-andrij-volodymyrovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/gusev-andrij-volodymyrovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/ignatenko-ruslan-valerijovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/ignatenko-ruslan-valerijovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/kudryk-nataliya-volodymyrivna/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/kudryk-nataliya-volodymyrivna/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/kyrychenko-sergij-volodymyrovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/kyrychenko-sergij-volodymyrovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/lapa-yurij-anatolijovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/lapa-yurij-anatolijovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/lovakov-oleg-anatolijovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/lovakov-oleg-anatolijovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/lugina-viktoriya-mykolayivna/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/lugina-viktoriya-mykolayivna/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/myheyenko-mykola-ivanovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/myheyenko-mykola-ivanovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/rodynchenko-igor-vasylovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/rodynchenko-igor-vasylovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/starostyuk-sergij-mykolajovych-2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/starostyuk-sergij-mykolajovych-2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/starostyuk-sergij-mykolajovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/starostyuk-sergij-mykolajovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/yushhenko-viktor-mykolajovych/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/stuff/yushhenko-viktor-mykolajovych/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/news/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/news/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/news/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/tags/news/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/uk/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/public/uk/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/baseof.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/baseof.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/docs.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/docs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/_default/single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/classes/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/classes/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/classes/single_class.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/classes/single_class.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/news/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/news/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/news/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/news/single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/menus.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/menus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/serv.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/partials/serv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/stuff/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/stuff/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/stuff/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/../avtomoto25.cn.ua/themes/my_theme/layouts/stuff/single.html" afterDir="false" />
+    <list default="true" id="c96928e2-991c-4af2-9de9-6e5588a30776" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="/" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2jTUHzPxyxHAjvjflpNOTIX3DND" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2kCqKm3rp6MXYSZTttbvPk7JLV4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/opt/hugo/n.avtomoto25.cn.ua/themes/my_theme/layouts/_default",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
-      <window_info id="Bookmarks" side_tool="true" />
-      <window_info id="Merge Requests" show_stripe_button="false" />
-      <window_info id="Commit_Guest" show_stripe_button="false" />
-      <window_info id="Pull Requests" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50080645" weight="0.41631943" />
-      <window_info active="true" id="Commit" order="1" visible="true" weight="0.41631943" />
-      <window_info active="true" id="VcsChanges" order="2" visible="true" weight="0.23476562" />
-      <window_info id="Structure" order="3" sideWeight="0.49919355" side_tool="true" weight="0.17465279" />
-      <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Find" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.2338889" />
+      <window_info id="Pull Requests" show_stripe_button="false" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.2576844" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.2338889" />
-      <window_info anchor="bottom" id="Services" order="4" weight="0.2576844" />
-      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
-      <window_info anchor="right" id="documentation.v2" side_tool="true" />
-      <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
-      <window_info anchor="right" id="Notifications" order="0" weight="0.35664064" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
       <window_info anchor="right" id="Database" order="2" weight="0.25" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
     </layout>
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/themes/my_theme/layouts/_default" />
-      <recent name="$PROJECT_DIR$/themes/my_theme/layouts/stuff1" />
-      <recent name="$PROJECT_DIR$/themes/my_theme/layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/themes/my_theme/layouts" />
-    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -240,140 +58,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a29f07e2-9189-4f6a-8a4f-9da3eeefc524" name="Changes" comment="" />
-      <created>1721410481710</created>
+      <changelist id="c96928e2-991c-4af2-9de9-6e5588a30776" name="Changes" comment="" />
+      <created>1722797849201</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1721410481710</updated>
-      <workItem from="1721410484961" duration="476000" />
-      <workItem from="1721411005840" duration="441000" />
-      <workItem from="1721421559646" duration="10000" />
-      <workItem from="1721421622048" duration="1625000" />
-      <workItem from="1721506224387" duration="880000" />
-      <workItem from="1721583357792" duration="2328000" />
-      <workItem from="1722024261702" duration="1941000" />
-      <workItem from="1722365655203" duration="2560000" />
-      <workItem from="1722370433320" duration="19324000" />
-      <workItem from="1722450872813" duration="4759000" />
-      <workItem from="1722533119515" duration="16465000" />
-      <workItem from="1722617068443" duration="9343000" />
-      <workItem from="1722787392458" duration="1577000" />
+      <updated>1722797849201</updated>
+      <workItem from="1722797853015" duration="9000" />
     </task>
-    <task id="LOCAL-00001" summary="сделал на главной и в букинге отображение классов красиво:-)">
-      <option name="closed" value="true" />
-      <created>1721422902334</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1721422902334</updated>
-    </task>
-    <task id="LOCAL-00002" summary="сделал на главной и в букинге отображение классов красиво:-)">
-      <option name="closed" value="true" />
-      <created>1721422933086</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1721422933086</updated>
-    </task>
-    <task id="LOCAL-00003" summary="сделал на главной и в букинге отображение классов красиво:-)">
-      <option name="closed" value="true" />
-      <created>1721507062936</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1721507062936</updated>
-    </task>
-    <task id="LOCAL-00004" summary="сделал на главной и в букинге отображение классов красиво:-)">
-      <option name="closed" value="true" />
-      <created>1721507070572</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1721507070572</updated>
-    </task>
-    <task id="LOCAL-00005" summary="исправил практику">
-      <option name="closed" value="true" />
-      <created>1721585651744</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1721585651744</updated>
-    </task>
-    <task id="LOCAL-00006" summary="начал делать преподавтелей через директус">
-      <option name="closed" value="true" />
-      <created>1722370527989</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1722370527989</updated>
-    </task>
-    <task id="LOCAL-00007" summary="начал делать преподавтелей через директус">
-      <option name="closed" value="true" />
-      <created>1722430493658</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1722430493658</updated>
-    </task>
-    <task id="LOCAL-00008" summary="почти финал">
-      <option name="closed" value="true" />
-      <created>1722623189646</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1722623189646</updated>
-    </task>
-    <task id="LOCAL-00009" summary="почти финал">
-      <option name="closed" value="true" />
-      <created>1722788088541</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1722788088542</updated>
-    </task>
-    <task id="LOCAL-00010" summary="почти финал">
-      <option name="closed" value="true" />
-      <created>1722788120424</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1722788120424</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="сделал на главной и в букинге отображение классов красиво:-)" />
-    <MESSAGE value="исправил практику" />
-    <MESSAGE value="Доделал и переехал на новый сайт" />
-    <MESSAGE value="начал делать преподавтелей через директус" />
-    <MESSAGE value="почти финал" />
-    <option name="LAST_COMMIT_MESSAGE" value="почти финал" />
   </component>
 </project>
