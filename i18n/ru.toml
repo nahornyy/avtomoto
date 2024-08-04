@@ -1,0 +1,71 @@
+[home]
+other = "главная"
+
+[education]
+other = "обучение"
+
+[lang]
+other = "язык"
+
+[students]
+other = "заполнение группы"
+
+[classroom]
+other = "классы"
+
+[social]
+other = "Мы в соцсетях"
+
+[detaled]
+other = "подробнее"
+
+[language]
+other = "Язык"
+
+[stuff]
+other = "Преподаватели"
+
+[reg]
+other = "Регистрация"
+
+[reg_button]
+other = "Регистрация на обучение"
+
+[date_of_studing]
+other = "Начало занятий"
+
+[driver]
+other = "Инструктор по вождению"
+
+[teacher]
+other = "Преподаватель автошколы"
+
+[comment]
+other = "Отзывы о преподавателе"
+
+[name]
+other = "Ваше имя"
+
+[docs]
+other = "Необходимые документы"
+
+[location]
+other = "Расположение класса"
+
+[schedule]
+other = "Расписание занятий"
+
+[gallery]
+other = "Галлерея"
+
+[all]
+other = "Все"
+
+[practic]
+other = "Пратктическая подготовка"
+[services]
+other = "Услуги"
+
+
+[cat]
+other = "Категория"

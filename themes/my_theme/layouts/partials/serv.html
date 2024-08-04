@@ -1,0 +1,40 @@
+<!-- Список услуг -->
+<div class="uk-container uk-container-lage">
+
+    <div class="uk-width-1-1">
+        <h3 class="uk-h3 uk-heading-divider uk-font-primary uk-text-primary uk-text-danger uk-margin uk-text-center uk-margin-top "
+            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">{{ T "services"}}</h3>
+    </div>
+</div>
+<div data-src="/images/home-about-bg.svg" uk-img class="uk-background-norepeat uk-background-center-center uk-section">
+
+
+
+    <div class="uk-container uk-container-lage uk-margin-top uk-align-center" uk-grid
+        uk-scrollspy="cls: uk-animation-slide-left; target: .uk-grid; delay: 200; repeat: true">
+        {{ with .Site.GetPage "/services" }}
+
+
+        <div
+            class="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-2@m uk-grid-large uk-flex-top uk-flex-wrap-top">
+            {{ range .Pages }}
+            <div class=" uk-child-width-expand uk-grid uk-margin-remove-top" uk-grid>
+                <div class="uk-width-auto@m uk-first-column">
+                    <img class="uk-align-center uk-margin-top" src="{{ .Params.image }}" width="100">
+                </div>
+                <div class="uk-margin-remove-first-child uk-margin-top">
+                    <h3 class="uk-card-title uk-h4 uk-heading-divider uk-text-primary">{{ .Title}}</h3>
+                    {{ .Content}}
+                    {{ if .Params.link }}
+                    <a class="uk-button uk-button-primary" href="{{ .Site.LanguagePrefix }}{{ .Params.link }}">{{ T
+                        "detaled"}}</a>
+                    {{ end }}
+
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+
+    </div>
+</div>

@@ -1,0 +1,382 @@
+{{ define "main" }}
+
+{{ partial "buttons.html" . }}
+
+
+
+<!-- Главная карусель комп-->
+<div class="uk-container uk-container-expand uk-padding-remove uk-visible@m">
+    <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-top"
+        uk-slideshow="animation: slide; autoplay: true; ratio: 192:50">
+
+        <div class="uk-slideshow-items">
+
+            <div>
+                <img src="/banners/vs_ua.png" alt="Автошкола Чернігів. Знижка жінкам!">
+            </div>
+            <div>
+                <img src="/banners/banner4.png" alt="Автошкола Чернігів. Знижка війсковим!">
+            </div>
+            <!--<div>
+                <video src="/banners/video.mp4" autoplay loop muted playsinline uk-video></video>
+            </div>-->
+            <div>
+                <iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/Iqcp-KdJrgQ?si=PM2NPjAR1UPwc-mK&controls=0&autoplay=1&mute=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous
+            uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next
+            uk-slideshow-item="next"></a>
+
+    </div>
+</div>
+
+<!-- Главная карусель моб-->
+<div>
+    <div class="uk-container uk-container-expand uk-padding-remove uk-hidden@m uk-margin-top">
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="min-height: 500; max-height: 500">
+            <ul class="uk-slideshow-items" uk-lightbox>
+                <li>
+                    <img src="/banners/banner_1_ua_mob.png" alt="Автошкола Чернігів. Знижка жінкам!" uk-cover>
+                </li>
+                <li>
+                    <img src="/banners/banner_2_ua_mob.png" alt="Автошкола Чернігів. Знижка жінкам!" uk-cover>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--Интро-->
+{{ partial "intro.html" .}}
+
+
+<!-- Классы и даты -->
+<div class="uk-container uk-container-large uk-margin-bottom">
+
+    <div class="uk-width-1-1">
+        <h3 class="uk-h3 uk-heading-divider uk-font-primary uk-text-primary uk-text-danger uk-margin uk-text-center uk-margin-top "
+            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">{{ T "date_of_studing"}}</h3>
+    </div>
+
+    <div class="uk-margin-top uk-grid-match uk-grid-small uk-child-width-1-3@m uk-child-width-1-4@l" uk-grid
+        uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300; repeat: true">
+        <!-- проспект перемоги -->
+        <!--  
+        <div>
+            
+            {{ $data := index .Site.Data .Site.Language.Lang }}
+            {{ range where $data.schedule "slug" "peremogy" }}
+            <h5 class="uk-heading-divider uk-text-bold uk-text-center uk-link-reset uk-text-danger">
+                <a href="{{ .url }}">{{ .street }}</a>
+            </h5>
+            <div class="uk-child-width-expand uk-grid-small uk-flex-middle uk-grid">
+                <div class="uk-width-auto uk-first-column">
+                    <span class="el-image uk-text-danger uk-icon"
+                        uk-icon="icon: calendar; width: 100; height: 100;"></span>
+                </div>
+                <div class="uk-margin-remove-first-child">
+
+                    <h2 class="el-title uk-h5 uk-text-muted uk-margin-top uk-margin-remove-bottom">
+                        <span class="uk-link-heading">{{ time.Format ":date_long" .date }}</span>
+                    </h2>
+                    <div class="uk-panel">
+                        <div class="uk-text-left">
+                            {{ T "education" }} <span class="uk-label uk-label-danger">{{ .form }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+            <div>
+                <progress class="uk-progress" value="{{ .student}}" max="24"></progress>
+            </div>
+            {{ end }}
+
+
+        </div>
+
+    -->
+
+
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-small">
+                <div class="uk-card-media-top">
+                    {{ with .Site.GetPage "/classes/m-chernigiv-vul-krasnosilskogo-59a" }}
+                    {{ $image := .Resources.Get "main.jpg" }}
+                    {{ $image := $image.Crop "1000x600" }}
+                    <img src="{{ $image.RelPermalink }}" width="1800" height="1000" alt="{{ .Title}}">
+                    {{ end }}
+                </div>
+
+
+                <div class="uk-card-body">
+                    {{ $data := index .Site.Data .Site.Language.Lang }}
+                    {{ range where $data.schedule "slug" "peremogy" }}
+                    <div class="uk-width-expand">
+                        <h5 class="uk-card-title uk-margin-remove-bottom uk-text-default uk-text-uppercase">{{
+                            .street
+                            }}</h5>
+                        <p class="uk-text-meta uk-margin-remove-top">{{ time.Format ":date_long" .date }}</p>
+                    </div>
+                    <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+                    <div><progress class="uk-progress" value="{{ .student}}" max="24"></progress></div>
+                </div>
+                <div class="uk-card-footer">
+
+
+                    <a href="{{ .url }}" class="uk-button uk-button-text uk-align-right">{{ T "detaled"}}</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-small">
+                <div class="uk-card-media-top">
+                    {{ with .Site.GetPage "/classes/rokoss" }}
+                    {{ $image := .Resources.Get "main.jpg" }}
+                    {{ $image := $image.Crop "1000x600" }}
+                    <img src="{{ $image.RelPermalink }}" width="1800" height="1000" alt="{{ .Title}}">
+                    {{ end }}
+                </div>
+
+                <div class="uk-card-body">
+                    {{ $data := index .Site.Data .Site.Language.Lang }}
+                    {{ range where $data.schedule "slug" "rokoss" }}
+                    <div class="uk-width-expand">
+                        <h5 class="uk-card-title uk-margin-remove-bottom uk-text-default uk-text-uppercase">{{
+                            .street
+                            }}</h5>
+                        <p class="uk-text-meta uk-margin-remove-top">{{ time.Format ":date_long" .date }}</p>
+                    </div>
+                    <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+                    <div><progress class="uk-progress" value="{{ .student}}" max="24"></progress></div>
+                </div>
+                <div class="uk-card-footer">
+
+
+                    <a href="{{ .url }}" class="uk-button uk-button-text uk-align-right">{{ T "detaled"}}</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        <!-- 
+        <div>
+            {{ $data := index .Site.Data .Site.Language.Lang }}
+            {{ range where $data.schedule "slug" "rokoss" }}
+            <h5 class="uk-heading-divider uk-text-bold uk-text-center uk-link-reset uk-text-danger">
+                <a href="{{ .url }}">{{ .street }}</a>
+            </h5>
+
+            <div class="uk-child-width-expand uk-grid-small uk-flex-middle uk-grid">
+                <div class="uk-width-auto uk-first-column">
+                    <span class="uk-text-danger uk-icon" uk-icon="icon: calendar; width: 100; height: 100;"></span>
+                </div>
+                <div class="uk-margin-remove-first-child">
+
+                    <h2 class="uk-h5 uk-text-muted uk-margin-top uk-margin-remove-bottom">
+                        <span class="uk-link-heading">{{ time.Format ":date_long" .date }}</span>
+                    </h2>
+                    <div class="uk-panel">
+                        <div class="uk-text-left">
+                            {{ T "education" }} <span class="uk-label uk-label-danger">{{ .form }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+            <div><progress class="uk-progress" value="{{ .student}}" max="24"></progress></div>
+            {{ end }}
+
+
+        </div>
+         -->
+        <!-- Масаны -->
+        <!-- 
+        <div>
+            {{ $data := index .Site.Data .Site.Language.Lang }}
+            {{ range where $data.schedule "slug" "masani" }}
+            <h5 class="uk-heading-divider uk-text-bold uk-text-center uk-link-reset uk-text-danger">
+                <a href="{{ .url }}">{{ .street }}</a>
+            </h5>
+            <div class="uk-child-width-expand uk-grid-small uk-flex-middle uk-grid">
+                <div class="uk-width-auto uk-first-column">
+                    <span class="uk-text-danger uk-icon" uk-icon="icon: calendar; width: 100; height: 100;"></span>
+                </div>
+                <div class="uk-margin-remove-first-child">
+
+                    <h2 class="el-title uk-h5 uk-text-muted uk-margin-top uk-margin-remove-bottom">
+                        <span class="uk-link-heading">{{ time.Format ":date_long" .date }}</span>
+                    </h2>
+                    <div class="uk-panel">
+                        <div class="uk-text-left">
+                            {{ T "education" }} <span class="uk-label uk-label-danger">{{ .form }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+            <div><progress class="uk-progress" value="{{ .student}}" max="24"></progress></div>
+            {{ end }}
+
+
+        </div>
+         -->
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-small">
+                <div class="uk-card-media-top">
+                    {{ with .Site.GetPage "/classes/masani" }}
+                    {{ $image := .Resources.Get "main.jpg" }}
+                    {{ $image := $image.Crop "1000x600" }}
+                    <img src="{{ $image.RelPermalink }}" width="1800" height="1000" alt="{{ .Title}}">
+                    {{ end }}
+                </div>
+
+
+                <div class="uk-card-body">
+                    {{ $data := index .Site.Data .Site.Language.Lang }}
+                    {{ range where $data.schedule "slug" "masani" }}
+                    <div class="uk-width-expand">
+                        <h5 class="uk-card-title uk-margin-remove-bottom uk-text-default uk-text-uppercase">{{
+                            .street
+                            }}</h5>
+                        <p class="uk-text-meta uk-margin-remove-top">{{ time.Format ":date_long" .date }}</p>
+                    </div>
+                    <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+                    <div><progress class="uk-progress" value="{{ .student}}" max="24"></progress></div>
+                </div>
+                <div class="uk-card-footer">
+
+
+                    <a href="{{ .url }}" class="uk-button uk-button-text uk-align-right">{{ T "detaled"}}</a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        <!-- пркактика -->
+        <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-small">
+                <div class="uk-card-media-top">
+
+                    {{ $image := resources.Get "images/driver.jpg" }}
+                    {{ $image := $image.Crop "1000x600" }}
+                    <img src="{{ $image.RelPermalink }}" width="1800" height="1000" alt="{{ .Title}}">
+
+                </div>
+
+
+
+                <div class="uk-card-body">
+                    <h5 class="uk-card-title uk-margin-remove-bottom uk-text-default uk-text-uppercase">{{ T
+                        "practic" }}</h5>
+                        <p class="uk-text-meta uk-margin-remove-top">гнучкий розклад</p>
+                    <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+                    <div><progress class="uk-progress" value="18" max="24"></progress></div>
+                </div>
+                <div class="uk-card-footer">
+
+
+                    <a href="{{ .Site.LanguagePrefix }}/booking" class="uk-button uk-button-text uk-align-right">{{ T
+                        "reg"}}</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- регистрация на практику -->
+        <!--
+        <div>
+
+            <h5 class="uk-heading-divider uk-text-bold uk-text-center uk-link-reset uk-text-danger">
+                <a href="{{ .Site.LanguagePrefix }}/booking">{{ T "practic" }}</a>
+            </h5>
+            <div class="uk-child-width-expand uk-grid-small uk-flex-middle uk-grid">
+                <div class="uk-width-auto uk-first-column">
+                    <img class="" src="/services/images/15819621-red-1.svg" width="75">
+                </div>
+                <div class="uk-margin-remove-first-child">
+
+                    <div class="uk-text-left">
+                        {{ .Content}}
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="uk-text-center uk-margin uk-margin-bottom">
+                <a class="uk-width-1-1 uk-button uk-button-primary uk-flex-inline uk-flex-center uk-flex-middle"
+                    href="{{ .Site.LanguagePrefix }}/booking">
+                    <span class="uk-margin-small-right uk-icon" uk-icon="mail"></span>
+                    {{ T "reg"}}
+                </a>
+            </div>
+
+
+
+        </div>
+        -->
+
+
+    </div>
+
+    <!-- кнопка практика -->
+    <!-- 
+    <div class="uk-margin-top">
+        <button class="uk-button uk-button-primary uk-align-center" type="button"
+            uk-toggle="target: #modal-practic"><span uk-icon="icon: info"></span> {{ T "practic"
+            }}</button>
+    </div>
+-->
+    <!-- This is the modal -->
+    <!-- 
+    <div id="modal-practic" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <h2 class="uk-modal-title">{{ T "practic"}}</h2>
+            <p>{{ .Content}}</p>
+            <p class="uk-text-right">
+
+                <a class="uk-button uk-button-primary" type="button" href="{{ .Site.LanguagePrefix }}/booking">{{ T
+                    "reg"}}</a>
+            </p>
+        </div>
+    </div>
+     -->
+
+</div>
+
+<div class="uk-container uk-container-expand uk-padding-remove">
+    <!--Сервисы-->
+    {{ partial "serv.html" .}}
+
+</div>
+
+<div class="uk-container uk-container-lage">
+    <!--Комментарии-->
+    <h2 class="uk-h2 uk-heading-divider uk-text-center">{{ .Params.comments }}</h2>
+    <div class="uk-column-1-2@s uk-column-1-3@m uk-column-1-4@l">
+        <div class="remark42__last-comments" data-max="40"></div>
+    </div>
+
+    <script>
+        var remark_config = {
+            host: "https://remark.cynic.club",
+            site_id: 'avtomoto',
+            components: ['last-comments'],
+            locale: 'ua',
+            no_footer: true
+        };
+    </script>
+    <script>!function (e, n) { for (var o = 0; o < e.length; o++) { var r = n.createElement("script"), c = ".js", d = n.head || n.body; "noModule" in r ? (r.type = "module", c = ".mjs") : r.async = !0, r.defer = !0, r.src = remark_config.host + "/web/" + e[o] + c, d.appendChild(r) } }(remark_config.components || ["embed"], document);</script>
+
+</div>
+
+{{ end }}

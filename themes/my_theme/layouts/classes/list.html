@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+{{ partial "buttons.html" .}}
+
+
+
+
+<!-- Шапка -->
+<div class="uk-container uk-container-large uk-margin-top">
+  {{ partial "breadcrumbs.html" . }}
+  
+  
+  <h1 class="uk-heading-divider">{{ .Params.head }}</h1>
+  
+  
+  <!-- выводим список классов -->
+  
+  <div class="uk-child-width-expand@m" uk-grid>
+
+    {{ range .Pages }}
+    
+    <div class="uk-text-center">
+
+      <div class="uk-inline-clip uk-transition-toggle uk-light">
+
+        
+
+
+
+          {{ $url := "https://directus.cynic.club/assets/" }}
+          {{ $file := .Params.image }}
+          {{ $key := "?key=key1"}}
+          {{ $url := print $url $file $key}}
+          {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
+          {{ with resources.GetRemote $url $opts}}
+            {{ with .Err }}
+              {{ errorf "%s" . }}
+            {{ else }}
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+            {{ end }}
+          {{ else }}
+            {{ errorf "Unable to get remote resource %q" $url }}
+          {{ end }}
+       
+
+        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+        <div class="uk-position-center">
+
+
+          <div class="uk-transition-slide-top-small">
+            <h4 class="uk-margin-remove">{{ .Params.title }}</h4>
+          </div>
+          <div class="uk-transition-slide-bottom-small">
+            <h4 class="uk-margin-remove uk-text-meta">{{ .Params.comment }}</h4>
+          </div>
+
+          <div class="uk-margin-top uk-transition-slide-bottom-small">
+            <a href="{{ .Params.slug}}" class="uk-button uk-button-primary">{{ T "detaled"}}</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {{ end }}
+  </div>
+
+</div>
+
+{{ end }}

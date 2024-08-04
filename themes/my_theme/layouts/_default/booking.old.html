@@ -1,0 +1,194 @@
+{{ define "main" }}
+
+
+{{ partial "buttons.html" .}}
+
+
+<div class="uk-container uk-container-large uk-margin-top">
+
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="uk-heading-divider">{{ .Title }}</h1>
+    {{ .Content }}
+
+
+    <div class="uk-child-width-expand@m" uk-grid>
+
+
+        <div>
+            <h3 class="uk-heading-divider">{{ .Params.subtitle1 }}</h3>
+            <div class="uk-grid uk-child-width-1-1 uk-flex-top uk-flex-wrap-top uk-margin-remove-left">
+                {{ range (where .Site.Pages "Section" "classes") }}
+                {{ range .Pages }}
+                <h5 class="uk-text-left uk-link-reset">
+                    <a href="{{ .RelPermalink }}">
+                        {{ range .Params.translations }}
+                        {{ .street }}
+                        {{ end }}
+                    </a>
+                </h5>
+                <div class="uk-child-width-expand uk-grid-small uk-flex-middle uk-grid">
+
+                    <div class="uk-width-auto uk-first-column">
+                        <span class="uk-text-danger uk-icon" uk-icon="icon: calendar; width: 50; height: 50;"></span>
+                    </div>
+                    <div class="uk-margin-remove-first-child">
+                        <h2 class="el-title uk-h5 uk-text-lead uk-margin-top uk-margin-remove-bottom">
+                            <span class="uk-link-heading">{{ time.Format ":date_long" .Params.new_date }}</span>
+                        </h2>
+
+                    </div>
+                </div>
+                <hr class="uk-margin">
+                {{ end }}
+                {{ end }}
+            </div>
+
+
+            <!--Модальное окно-->
+            <button class="uk-button uk-button-primary uk-width-1-1" type="button" uk-toggle="target: #offcanvas-usage">
+                {{ T
+                "docs"}}
+            </button>
+
+
+            <div id="offcanvas-usage" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar">
+
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                    {{ with .Site.GetPage "/docs" }}
+                    <h3>{{ .Content }}</h3>
+                    <p>{{ .Params.pass_2 }}</p>
+                    <p>{{ .Params.pass_3 }}</p>
+                    <hr>
+                    <p>{{ .Params.ipn_2 }}</p>
+                    <hr>
+                    <p>{{ .Params.med_2 }}</p>
+                    <hr>
+                    <p>{{ .Params.photo_2 }}</p>
+                    {{ end}}
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Форма записи -->
+        <div class="uk-margin-remove-top">
+
+            <h3 class="uk-heading-divider">{{ T "reg" }}</h3>
+
+
+            <div>
+
+                <form accept-charset="UTF-8"
+                      action="https://n8n.cynic.club/webhook/34fe680f-20bf-4dad-887c-0e3b09112b94"
+                      class="uk-form-stacked" method="POST">
+                    <input name="locale" type="hidden" value="uk">
+            </div>
+
+            <div class="uk-margin">
+                <input required name="your-name" class="uk-input" type="text" placeholder="{{ T "name" }}" aria-label="Input">
+            </div>
+            <div class="uk-margin">
+                <input aria-label="Input" class="uk-input" name="your-email" placeholder="Ваш email" required
+                       type="email">
+            </div>
+            <div class="uk-margin">
+                <input aria-label="Input" class="uk-input" name="your-phone" placeholder="+380-XX-XXX-XX-XX" required
+                       type="tel">
+            </div>
+
+
+            <div class="uk-margin">
+                <div class="uk-form-controls">
+                    <select class="uk-select" id="form-stacked-select" name="your-class" required>
+                        <option selected value="">Оберіть зручне розташування класу</option>
+                        <option value="Проспект Перемоги 21">Проспект Перемоги 21</option>
+                        <option value="Проспект Левка Лук’яненка 51">Проспект Левка Лук’яненка 51</option>
+                        <option value="Онлайн">Онлайн</option>
+                        <option value="Практична підготовка">Практична підготовка</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--
+              <p>Оберіть необхідні категорії<br>
+                <span data-name="your-category"><span><label><input type="checkbox" name="your-category[]"
+                        value="A1"><span>A1</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox"
+                        name="your-category[]" value="A"><span>A</span></label></span><label><input type="checkbox"
+                      name="your-category[]" value="B1"><span
+                      class="wpcf7-list-item-label">B1</span></label></span><label><input type="checkbox"
+                    name="your-category[]" value="B"><span class="wpcf7-list-item-label">B</span></label></span><label><input
+                    type="checkbox" name="your-category[]" value="C1"><span
+                    class="wpcf7-list-item-label">C1</span></label><label><input type="checkbox" name="your-category[]"
+                    value="C"><span class="wpcf7-list-item-label">C</span></label></span><label><input type="checkbox"
+                    name="your-category[]" value="BE"><span
+                    class="wpcf7-list-item-label">BE</span></label></span></span></span>
+              </p>
+        -->
+            <div class="uk-margin">
+                <div class="uk-form-label">
+                    <h5>Оберіть необхідні категорії</h5>
+                </div>
+                <div class="uk-form-controls">
+                    <label><input class="uk-checkbox" id="form-category" name="your-category" type="checkbox"
+                                  value="A1">
+                        A1</label>
+                    <label><input class="uk-checkbox" id="form-category" name="your-category" type="checkbox" value="A">
+                        A</label>
+                    <label><input class="uk-checkbox" id="form-category" name="your-category" type="checkbox"
+                                  value="B1">
+                        B1</label>
+                    <label><input class="uk-checkbox" id="form-category" name="your-category" type="checkbox" value="B">
+                        B</label>
+                    <label><input class="uk-checkbox" id="form-category" name="your-category" type="checkbox"
+                                  value="C1">
+                        C1</label>
+                    <label><input class="uk-checkbox" id="form-category" name="your-category" type="checkbox" value="C">
+                        C</label>
+                    <label><input class="uk-checkbox" id="form-category" name="your-category" type="checkbox"
+                                  value="BE">
+                        BE</label>
+                </div>
+            </div>
+
+
+            <div class="uk-margin">
+                <div class="uk-form-label">
+                    <h5>З якого джерела інформації Ви дізналися про нашу
+                        автошколу?</h5>
+                </div>
+                <div class="uk-form-controls">
+                    <label><input class="uk-radio" name="your-source" type="radio" value="від друзів"> від
+                        друзів</label>
+                    <label><input class="uk-radio" name="your-source" type="radio" value="від нашого випускника"> від
+                        нашого
+                        випускника</label>
+                    <label><input class="uk-radio" name="your-source" type="radio" value="Facebook"><span
+                            uk-icon="icon: facebook"></span></label>
+                    <label><input class="uk-radio" name="your-source" type="radio" value="Instagram"><span
+                            uk-icon="icon: instagram"></span></label>
+                    <label><input class="uk-radio" name="your-source" type="radio" value="Google"><span
+                            uk-icon="icon: google">
+            </span> </label>
+                    <label><input class="uk-radio" name="your-source" type="radio" value="інше"> інше</label>
+                </div>
+
+            </div>
+
+
+            <div>
+                <p><input class="has-spinner uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"
+                          type="submit"
+                          value="Зареєструватися"></span>
+                </p>
+
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    {{ end }}

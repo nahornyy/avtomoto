@@ -1,0 +1,68 @@
+[
+    {
+        "slug": "rokoss",
+        "url": "/ru/classes/m-chernigiv-vul-rokosovskogo-51/",
+        "street": "Проспект Левка Лукьяненко 51",
+        "date": "2024-07-03",
+        "student": "0",
+        "form": "очное",
+        "latitude": "51.513540485472234",
+        "longitude": "31.316193698642692",
+        "day_1": {
+            "day": "понедельник",
+            "time": "18:00"
+        },
+        "day_2": {
+            "day": "понедельник",
+            "time": "18:00"
+        },
+        "day_3": {
+            "day": "понедельник",
+            "time": "18:00"
+        }
+    },
+    {
+        "slug": "peremogy",
+        "url": "/ru/classes/m-chernigiv-prospekt-peremogy-39/",
+        "street": "Проспект Победы 21",
+        "date": "2024-07-03",
+        "student": "8",
+        "form": "очное",
+        "latitude": "51.486507774466034",
+        "longitude": "31.275448913411825",
+        "day_1": {
+            "day": "понедельник",
+            "time": "18:00"
+        },
+        "day_2": {
+            "day": "среда",
+            "time": "18:00"
+        },
+        "day_3": {
+            "day": "пятница",
+            "time": "18:00"
+        }
+    },
+    {
+        "slug": "masani",
+        "url": "/ru/classes/m-chernigiv-vul-krasnosilskogo-59a/",
+        "street": "Дистанционное обучение",
+        "date": "2024-07-08",
+        "student": "8",
+        "form": "очное",
+        "latitude": "51.51692827841222",
+        "longitude": "31.238137356752382",
+        "day_1": {
+            "day": "понедельник",
+            "time": "18:00"
+        },
+        "day_2": {
+            "day": "среда",
+            "time": "18:00"
+        },
+        "day_3": {
+            "day": "четверг",
+            "time": "19:30"
+        }
+    }
+]

@@ -1,0 +1,6 @@
+disableKinds = [ "sitemap", "taxonomy", "term" ]
+
+[outputs]
+home = [ "html" ]
+[params]
+  api_url = "http://10.100.10.10:8055"

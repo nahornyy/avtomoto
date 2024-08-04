@@ -1,0 +1,23 @@
+<!-- <hr class="uk-divider-icon"> -->
+
+<div class="uk-margin-bottom uk-margin-top">
+    <div class="uk-width-1-1@m">
+        <h1 class="uk-heading-xlarge uk-text-muted uk-width-2xlarge uk-margin-auto uk-text-center uk-scrollspy-inview">
+            <span class="uk-text-primary">Авто</span>Школа
+        </h1>
+        <h2 class="uk-heading-medium uk-font-primary uk-text-primary uk-text-center uk-scrollspy-inview "><span
+                class="uk-text-muted uk-text-light" >{{ T "cat"}} </span></span>B<span class="uk-text-muted uk-text-light"> </span></h2>
+    </div>
+
+    <div class="uk-grid-margin uk-container uk-container-xsmall">
+        <div class="uk-grid tm-grid-expand uk-child-width-1-1">
+
+            <div class="uk-panel uk-text-lead uk-margin-remove-vertical uk-text-justify">
+                {{ with .GetPage "/intro" }}
+                {{ .Content}}
+                {{ end }}
+            </div>
+
+        </div>
+    </div>
+</div>

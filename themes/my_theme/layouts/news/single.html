@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+{{ partial "buttons.html" }}
+
+<!-- Шапка -->
+<div class="uk-container uk-container-large uk-margin-top">
+  {{ partial "breadcrumbs.html" . }}  
+
+  <h1 class="uk-heading-divider">{{ .Title}}</h1>
+  
+
+
+
+  <!-- выводим список новостей -->
+
+
+ 
+
+    <article class="uk-article uk-margin-remove-top">
+      <p class="uk-article-meta">{{ .Date | time.Format ":date_long" }}</p>
+
+      <p>{{ .Content}}</p>
+
+      <div class="uk-grid-small uk-child-width-auto" uk-grid>
+
+      </div>
+    </article>
+
+
+
+
+
+  </div>
+ 
+  
+{{ end }}
+
+

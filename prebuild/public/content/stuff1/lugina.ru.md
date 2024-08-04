@@ -1,0 +1,1 @@
+{"photo":"3834003c-5083-46ee-8994-7944dc3e93b7","slug":"lugina","tag":"teacher","title":"Лугіна Вікторія Миколаївна","translations":[{"id":17,"languages_code":"ru","name":"Лугина Виктория Николаевна","stuff_slug":"lugina"}]}

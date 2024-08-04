@@ -1,0 +1,72 @@
+[home]
+other = "головна"
+
+[education]
+other = "навчання"
+
+[lang]
+other = "мова"
+
+[students]
+other = "заповнення групи"
+
+[classroom]
+other = "класи"
+
+[social]
+other = "Ми у соцмережах"
+
+[detaled]
+other = "докладніше"
+
+[language]
+other = "Мова"
+
+[stuff]
+other = "Викладачі"
+
+[reg]
+other = "Реєстрація"
+
+[reg_button]
+other = "Реєстрація на навчання"
+
+[date_of_studing]
+other = "Початок занять"
+
+[driver]
+other = "Інструктор з водіння"
+
+[teacher]
+other = "Викладач автошколи"
+
+[comment]
+other = "Відгуки про викладача"
+
+[name]
+other = "Ваше ім'я"
+
+[docs]
+other = "Необхідні документи"
+
+[location]
+other = "Розташування класу"
+
+[schedule]
+other = "Розклад занять"
+
+
+[gallery]
+other = "Галерея"
+
+[all]
+other = "Усі"
+
+[practic]
+other = "Практична підготовка"
+
+[services]
+other = "Послуги"
+
+[cat]
+other = "Категорія"

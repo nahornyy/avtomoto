@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{ $data := getJSON "https://n8n.cynic.club/webhook/8f43e13a-188b-417c-baed-f0e81408788c" }}
+
+
+
+<table class="uk-table uk-table-hover uk-table-divider">
+  <thead>
+    <tr>
+      <th>Ціна</th>
+      <th>Хост</th>
+      <th>Інформація</th>
+      <th>Тип</th>
+      <th>Стан</th>
+      <th>Завершується</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $data }}
+    
+    <tr>
+      <td>€ {{ .Price }}</td>
+      <td>{{ .name }}</td>
+      <td></td>
+      <td></td>
+      <td>ОК</td>
+      <td>{{ .days_left }}</td>
+    </tr>
+
+
+    {{ end }}
+  </tbody>
+</table>
+
+
+{{ end }}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ partial "buttons.html" . }}
+
+
+<div class="uk-container uk-container-large uk-margin-top">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="uk-heading-divider">{{ .Title }}</h1>
+
+
+
+    {{ .Content }}
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+</div>
+{{ end }}

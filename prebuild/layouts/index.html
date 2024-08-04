@@ -1,0 +1,203 @@
+<!-- классы -->
+
+
+<!-- укр язык new-->
+{{ with resources.GetRemote (printf
+"%s/items/classes?fields[]=*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*&fields[]=galley.directus_files_id"
+site.Params.api_url) }}
+{{ $pages := unmarshal .Content }}
+{{ range $pages.data }}
+
+{{ $gallery := .galley }}
+{{ $content := .translations }}
+{{ $title := 0 }}
+{{ $address := 0 }}
+{{ $day1 := 0 }}
+{{ $day2 := 0 }}
+{{ $day3 := 0 }}
+{{ $comment := 0 }}
+{{ $form := 0 }}
+
+
+{{ $gal :=  $gallery }}
+{{ $gal = dict "gallery" $gal }}
+
+
+{{ range $content }}
+{{ $title = .street }}
+{{ $address = .address }}
+{{ $day1 = .day1 }}
+{{ $day2 = .day2 }}
+{{ $day3 = .day3 }}
+{{ $comment = .comment }}
+{{ $form = .form }}
+
+{{ end }}
+{{ $meta := dict "slug" .slug "image" .cover "title" $title "address" $address "day1" $day1 "day2" $day2 "day3" $day3 "comment" $comment "new_date" .new_date "latitude" .latitude "longitude" .longitude "count" .count "day1_time" .day1_time "day2_time" .day2_time "day3_time" .day3_time "form" $form }}
+{{ $merged := merge $meta $gal }}
+{{ $metaJson := jsonify $merged }}
+
+
+{{ $output := printf "%s" $metaJson }}
+{{ $filename := printf "content/classes/%s.md" .slug }}
+{{ $resource := resources.FromString $filename $output  }}
+{{ $file := $resource.RelPermalink }}
+{{ end }}
+{{ end }}
+
+
+<!-- рус язык new-->
+{{ with resources.GetRemote (printf
+"%s/items/classes?fields[]=*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*&fields[]=galley.directus_files_id"
+site.Params.api_url) }}
+{{ $pages := unmarshal .Content }}
+{{ range $pages.data }}
+
+{{ $gallery := .galley }}
+{{ $content := .translations }}
+{{ $title := 0 }}
+{{ $address := 0 }}
+{{ $day1 := 0 }}
+{{ $day2 := 0 }}
+{{ $day3 := 0 }}
+{{ $comment := 0 }}
+{{ $form := 0 }}
+
+
+
+        {{ $gal :=  $gallery }}
+        {{ $gal = dict "gallery" $gal }}
+
+
+    {{ range $content }}
+        {{ $title = .street }}
+        {{ $address = .address }}
+        {{ $day1 = .day1 }}
+        {{ $day2 = .day2 }}
+        {{ $day3 = .day3 }}
+        {{ $comment = .comment }}
+        {{ $form = .form }}
+
+
+    {{ end }}
+{{ $meta := dict "slug" .slug "image" .cover "title" $title "address" $address "day1" $day1 "day2" $day2 "day3" $day3 "comment" $comment "new_date" .new_date "latitude" .latitude "longitude" .longitude "count" .count "day1_time" .day1_time "day2_time" .day2_time "day3_time" .day3_time  "form" $form}}
+{{ $merged := merge $meta $gal }}
+{{ $metaJson := jsonify $merged }}
+
+
+{{ $output := printf "%s" $metaJson }}
+{{ $filename := printf "content/classes/%s.ru.md" .slug }}
+{{ $resource := resources.FromString $filename $output  }}
+{{ $file := $resource.RelPermalink }}
+{{ end }}
+{{ end }}
+
+
+
+<!--индекс   юа-->
+{{ $meta := dict "head" "Наші класи" "title" "Класи" }}
+{{ $output := jsonify $meta }}
+{{ $filename := printf "content/classes/_index.md" }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
+
+
+
+
+<!--индекс ру-->
+{{ $meta := dict "head" "Наши классы" "title" "Классы" }}
+{{ $output := jsonify $meta }}
+{{ $filename := printf "content/classes/_index.ru.md" }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
+
+
+
+<!-- преподаватели -->
+<!--index-->
+
+{{ $meta := dict "head" "Наші викладачі" "title" "Викладачі" "description" "Викладачі та інструктори нашої автошколи" }}
+{{ $output := jsonify $meta }}
+{{ $filename := printf "content/stuff/_index.md" }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
+
+{{ $meta := dict "head" "Наши преподаватели" "title" "Преподаватели" "description" "Преподаватели и инструкторы нашей автошколы" }}
+{{ $output := jsonify $meta }}
+{{ $filename := printf "content/stuff/_index.ru.md" }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
+
+
+<!-- укр язык -->
+{{ with resources.GetRemote (printf
+    "%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*"
+    site.Params.api_url) }}
+    {{ $posts := unmarshal .Content }}
+    
+    {{ range $posts.data }}
+    {{ $content :=  .translations }}
+    {{ $name := 0 }}
+        {{ range $content }}
+            {{ $name =  .name }}
+        {{ end }}
+    {{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
+    {{ $metaJson := jsonify $meta }}
+    {{ $output := printf "%s" $metaJson }}
+    {{ $filename := printf "content/stuff/%s.md" .slug }}
+    {{ $resource := resources.FromString $filename $output  }}
+    {{ $file := $resource.RelPermalink }}
+    
+    {{ end }}
+    {{ end }}
+
+<!-- рус язык -->
+{{ with resources.GetRemote (printf
+"%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*"
+site.Params.api_url) }}
+{{ $posts := unmarshal .Content }}
+
+{{ range $posts.data }}
+{{ $content :=  .translations }}
+{{ $name := 0 }}
+    {{ range $content }}
+        {{ $name =  .name }}
+    {{ end }}
+{{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
+{{ $metaJson := jsonify $meta }}
+{{ $output := printf "%s" $metaJson }}
+{{ $filename := printf "content/stuff/%s.ru.md" .slug }}
+{{ $resource := resources.FromString $filename $output  }}
+{{ $file := $resource.RelPermalink }}
+
+{{ end }}
+{{ end }}
+
+
+<!-- преподаватели -->
+<!-- рус язык -->
+{{ with resources.GetRemote (printf
+"%s/items/stuff?fields[]=*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*"
+site.Params.api_url) }}
+{{ $pages := unmarshal .Content }}
+{{ range $pages.data }}
+{{ $output := jsonify . }}
+{{ $filename := printf "content/stuff1/%s.ru.md" .slug }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
+{{ end }}
+{{ end }}
+
+
+<!-- укр язык -->
+{{ with resources.GetRemote (printf
+"%s/items/stuff?fields[]=*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*"
+site.Params.api_url) }}
+{{ $pages := unmarshal .Content }}
+{{ range $pages.data }}
+{{ $output := jsonify . }}
+{{ $filename := printf "content/stuff1/%s.uk.md" .slug }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
+{{ end }}
+{{ end }}

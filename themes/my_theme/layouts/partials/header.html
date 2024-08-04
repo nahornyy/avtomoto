@@ -1,0 +1,111 @@
+
+<!--<div  class="uk-container uk-container-xlarge uk-visible@m" >
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-center uk-text-bold">
+    
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="/">{{ T "home" }}</a></li>
+                <li class="uk-active"><a href="#">Про автошколу</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="classes/">{{ T "classroom" }}</a></li>
+                            <li><a href="#">Викладачи</a></li>
+                        </ul>
+                    </div>
+                
+                
+                </li>
+                <li class="uk-active"><a href="#">{{ T "education" }}</a></li>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="/booking/">Реєстрація на навчання</a></li>
+                            <li><a href="#">Необхідні документи</a></li>
+                        </ul>
+                    </div>
+                <li class="uk-active"><a href="#">Контакти</a></li>
+                <li class="uk-active"><a href="#">Майбутнім водіям</a></li>
+                <li class="uk-active"><a href="#">{{ T "lang" }}</a></li>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            {{ range $.Site.Home.AllTranslations }}
+                            <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+               
+            </ul>
+    
+        </div>
+        <div class="uk-navbar-right">
+            <div>
+                    <div class="uk-margin uk-text-left@s uk-text-center" uk-scrollspy="target: [uk-scrollspy-class];"> 
+                        <div class="uk-child-width-auto uk-grid-small uk-flex-inline uk-grid" uk-grid="">
+                            <div class="uk-first-column">
+                                <a class="el-link uk-icon-link" href="https://www.facebook.com/Avtomoto25/" rel="noreferrer"><span uk-icon="icon: facebook;" class="uk-icon"></span></a>
+                            </div>
+                            <div>
+                                <a class="el-link uk-icon-link" href="https://www.instagram.com/avtoshkolaavtomoto25/" rel="noreferrer"><span uk-icon="icon: instagram;" class="uk-icon"></span></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </nav>
+</div>
+-->
+
+<!--
+<div  class="uk-container uk-container-xlarge uk-hidden@m uk-margin-top" >
+
+    <a href="https://avtomoto25.cn.ua/" aria-label="Back to home">
+        <img class="uk-align-center" alt="Автошкола Чернігів Автомото 25" uk-img="loading: eager" width="250"  src="https://avtomoto25.cn.ua/wp-content/uploads/logo_h_35.svg">
+    </a>
+    
+    <nav class="uk-navbar-container uk-margin">
+        <div class="uk-container">
+            <div uk-navbar>
+    
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active"><a href="/">Головна</a></li>
+                        <li class="uk-active"><a href="#">Про автошколу</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="classes/">Класи</a></li>
+                                    <li><a href="#">Викладачи</a></li>
+                                </ul>
+                            </div>
+                        
+                        
+                        </li>
+                        <li class="uk-active"><a href="#">Навчання</a></li>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="#">Реєстрація на навчання</a></li>
+                                <li><a href="#">Необхідні документи</a></li>
+                            </ul>
+                        </div>
+                        <li class="uk-active"><a href="#">Контакти</a></li>
+                        <li class="uk-active"><a href="#">Майбутнім водіям</a></li>
+                        <li class="uk-active"><a href="#">Мова</a></li>
+        
+                       
+                    </ul>
+                </div>
+                </div>
+            
+            </div>
+        </div>
+    </nav>
+</div> 
+
+    
+
+-->
+
+
+
+
+<!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->

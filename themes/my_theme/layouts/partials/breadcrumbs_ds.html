@@ -1,0 +1,18 @@
+<nav aria-label="Breadcrumb" class="uk-margin-top">
+    <ul class="uk-breadcrumb">
+      {{ range .Ancestors.Reverse }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
+      {{ end }}
+
+ 
+  {{ range .Params.translations }}
+  
+  <li class="active">
+    <a aria-current="page" href="{{ .RelPermalink }}">{{ .title }}</a>
+  </li>
+  {{ end }}
+
+</ul>
+</nav>

@@ -1,0 +1,132 @@
+baseURL = 'https://avtomoto25.cn.ua/'
+defaultContentLanguage = 'uk'
+timezone = 'Europe/Kyiv'
+theme = 'my_theme'
+enableRobotsTXT = true
+[params]
+    api_url = "http://10.100.10.10:8055"
+    api_auth = "Bearer 0WMIqchUCg-pWLsyOFxKOYnvBveTODTZ"
+    title = 'Автошкола в місті Чернігів'
+    description = 'Автошкола в місті Чернігів. Теоретичне та практичне навчання. Заочні та очні заняття'
+[languages]
+  [languages.uk]
+    languageCode = 'uk'
+    languageName = "Українська"
+    title = 'Автошкола Автомото25 в місті Чернігів'
+    weight = 1
+
+
+    [languages.uk.menus]
+      [[languages.uk.menus.main]]
+        name = 'Головна'
+        pageRef = '/'
+        weight = 10
+      [[languages.uk.menus.main]]
+        name = 'Про автошколу'
+        pageRef = '#'
+        weight = 20
+      [[languages.uk.menus.main]]
+        name = 'Навчання'
+        pageRef = '#'
+        weight = 30 
+      [[languages.uk.menus.main]]
+        parent = 'Навчання'
+        name = 'Реєстрація на навчання'
+        pageRef = '/booking'
+        weight = 10
+      [[languages.uk.menus.main]]
+        parent = 'Навчання'
+        name = 'Необхідні документи'
+        pageRef = '/docs'
+        weight = 20             
+      [[languages.uk.menus.main]]
+        parent = 'Про автошколу'
+        identifier = 'classes'
+        name = 'Класи'
+        pageRef = '/classes'
+        weight = 10
+      [[languages.uk.menus.main]]
+        parent = 'Про автошколу'
+        name = 'Викладачі'
+        pageRef = '/stuff'
+        weight = 20
+      [[languages.uk.menus.main]]
+        name = 'Контаткти'
+        pageRef = '/contact'
+        weight = 40   
+      [[languages.uk.menus.main]]
+        name = 'Майбутнім водіям'
+        pageRef = '/news'
+
+  [languages.ru]
+    languageCode = 'ru-UA'
+    
+    title = 'Автошкола Автомото25 в  городе Чернигов'
+    weight = 2
+    languageName = "Русский"
+        [languages.ru.menus]
+      [[languages.ru.menus.main]]
+        name = 'Главная'
+        identifier = 'home'
+        pageRef = '/'
+        weight = 10
+      [[languages.ru.menus.main]]
+        name = 'Про автошколу'
+        pageRef = '#'
+        weight = 20
+      [[languages.ru.menus.main]]
+        name = 'Обучение'
+        pageRef = '#'
+        weight = 30 
+      [[languages.ru.menus.main]]
+        parent = 'Обучение'
+        name = 'Регистрация на обучение'
+        pageRef = '/booking'
+        weight = 10
+      [[languages.ru.menus.main]]
+        parent = 'Обучение'
+        name = 'Необходимые документы'
+        pageRef = '/docs'
+        weight = 20          
+      [[languages.ru.menus.main]]
+        parent = 'Про автошколу'
+        name = 'Классы'
+        pageRef = '/classes'
+        weight = 20
+      [[languages.ru.menus.main]]
+        parent = 'Про автошколу'
+        name = 'Преподаватели'
+        pageRef = '/stuff'
+        weight = 20
+      [[languages.ru.menus.main]]
+        name = 'Контаткты'
+        pageRef = '/contact'
+        weight = 40   
+      [[languages.ru.menus.main]]
+        name = 'Будущим водителям'
+        pageRef = '/news'
+        weight = 50 
+
+[markup]
+  [markup.goldmark]     
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true 
+
+      
+
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "prebuild/public/content/classes"
+    target = "content/classes"
+  [[module.mounts]]
+    source = "prebuild/public/content/stuff"
+    target = "content/stuff"
+

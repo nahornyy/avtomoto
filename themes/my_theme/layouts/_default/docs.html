@@ -1,0 +1,94 @@
+{{ define "main" }}
+
+{{ partial "buttons.html" .}}
+
+
+<div class="uk-container uk-container-large uk-margin-top">
+  {{ partial "breadcrumbs.html" . }}
+  <h1 class="uk-heading-divider">{{ .Title }}</h1>
+
+  {{ .Content }}
+
+
+
+
+
+  <table
+    class="uk-table uk-table-divider uk-table-middle uk-table-responsive uk-text-left@s uk-text-center uk-scrollspy-inview "
+    uk-scrollspy-class="" style="">
+    <tbody>
+      <tr class="el-item">
+      
+        <td class="uk-text-nowrap uk-table-shrink">
+          <div class="el-title uk-h3 uk-text-primary">{{ .Params.pass }}</div>
+        </td>
+        <td class="uk-table-shrink">
+          <picture>
+            <img decoding="async" src="/images/passport.jpg" width="250" height="160"
+              class="el-image uk-preserve-width uk-box-shadow-small" alt="{{ .Title }}" loading="lazy">
+          </picture>
+        </td>
+        <td class="uk-text-nowrap uk-text-left@m uk-table-shrink">
+          <div class="el-content uk-panel">
+            <p>{{ .Params.pass_2 }}</p>
+            <p>{{ .Params.pass_3 }}</p>
+          </div>
+        </td>
+      
+      </tr>
+      <tr class="el-item">
+     
+        <td class="uk-text-nowrap">
+          <div class="el-title uk-h3 uk-text-primary">{{ .Params.ipn }}</div>
+        </td>
+        <td>
+          <picture>
+            <img decoding="async" src="/images/ipn.jpg" width="250" height="148"
+              class="el-image uk-preserve-width uk-box-shadow-small" alt="" loading="lazy">
+          </picture>
+        </td>
+        <td class="uk-text-nowrap uk-text-left@m">
+          <div class="el-content uk-panel">
+            <p>{{ .Params.ipn_2 }}</p>
+          </div>
+        </td>
+      
+      </tr>
+      <tr class="el-item">
+      
+        <td class="uk-text-nowrap">
+          <div class="el-title uk-h3 uk-text-primary">{{ .Params.med }}</div>
+        </td>
+        <td>
+          <picture>
+            <img decoding="async" src="/images/dovidka.jpg" width="250" height="184"
+              class="el-image uk-preserve-width uk-box-shadow-small" alt="" loading="lazy">
+          </picture>
+        </td>
+        <td class="uk-text-nowrap uk-text-left@m">
+          <div class="el-content uk-panel">{{ .Params.med_2 }}</div>
+        </td>
+     
+      </tr>
+      <tr class="el-item">
+      
+        <td class="uk-text-nowrap">
+          <div class="el-title uk-h3 uk-text-primary">{{ .Params.photo }}</div>
+        </td>
+        <td>
+          <picture>
+            <img decoding="async" src="/images/bin.jpg" width="250" height="164"
+              class="el-image uk-preserve-width uk-box-shadow-small" alt="" loading="lazy">
+          </picture>
+        </td>
+        <td class="uk-text-nowrap uk-text-left@m">
+          <div class="el-content uk-panel">
+            {{ .Params.photo_2 }}
+          </div>
+        </td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+  {{ end }}
