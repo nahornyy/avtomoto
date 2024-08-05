@@ -6,7 +6,7 @@
 <div class="uk-container uk-container-large uk-margin-top">
   {{ partial "breadcrumbs.html" . }}
 
-
+  {{ $alt := .Params.title }}
 
   <h1 class="uk-heading-divider">{{ .Params.title }}</h1>
   {{ $driver := .Params.tag }}
@@ -31,7 +31,7 @@
         {{ with .Err }}
         {{ errorf "%s" . }}
         {{ else }}
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}" >
         {{ end }}
         {{ else }}
         {{ errorf "Unable to get remote resource %q" $url }}

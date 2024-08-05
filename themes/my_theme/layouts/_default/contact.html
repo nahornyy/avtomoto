@@ -32,14 +32,14 @@
                          uk-grid="">
                         {{ with .Site.GetPage "/classes" }}
                         {{ range .Pages }}
-                        {{ range .Params.translations }}
+                        
                         <div bis_skin_checked="1" class="uk-first-column">
                             <div class="el-item uk-panel uk-margin-remove-first-child uk-scrollspy-inview "
                                  style=""
                                  uk-scrollspy-class="">
                                 <div bis_skin_checked="1" class="el-content uk-panel uk-text-lead uk-margin-top">
-                                    <p class="uk-text-large">{{ .street }} </p>
-                                    <p class="uk-text-meta">{{ .comment }}</p>
+                                    <p class="uk-text-large">{{ .Params.title }} </p>
+                                    <p class="uk-text-meta">{{ .Params.comment }}</p>
                                     <div class="uk-margin-top ">
                                         <a class="uk-button uk-button-primary" href="{{ .RelPermalink }}">{{ T
                                             "detaled"}}</a>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{ end }}
+                        
                         {{end}}
                         {{end}}
                         <div bis_skin_checked="1" class="uk-grid-margin">
