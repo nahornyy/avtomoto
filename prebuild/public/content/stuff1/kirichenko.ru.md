@@ -1,1 +1,0 @@
-{"photo":"52c3195f-9d5d-49df-bd90-85d99033333e","slug":"kirichenko","tag":"driver","title":"Кириченко Сергій Володимирович","translations":[{"id":13,"languages_code":"ru","name":"Кириченко Сергей Владимирович","stuff_slug":"kirichenko"}]}

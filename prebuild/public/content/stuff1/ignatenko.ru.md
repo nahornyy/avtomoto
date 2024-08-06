@@ -1,1 +1,0 @@
-{"photo":"b1dd1234-284f-47f1-ad4b-ea84fc184f71","slug":"ignatenko","tag":"driver","title":"Iгнатенко Руслан Валерiйович","translations":[{"id":9,"languages_code":"ru","name":"Игнатенко Руслан Валерьевич","stuff_slug":"ignatenko"}]}

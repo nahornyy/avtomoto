@@ -1,1 +1,1 @@
-{"image":"3834003c-5083-46ee-8994-7944dc3e93b7.jpg","slug":"lugina","tag":"teacher","title":"Лугина Виктория Николаевна"}
+{"feature_images":"/lugina_4804975302855696809.jpg","image":"3834003c-5083-46ee-8994-7944dc3e93b7.jpg","slug":"lugina","tag":"teacher","title":"Лугина Виктория Николаевна"}

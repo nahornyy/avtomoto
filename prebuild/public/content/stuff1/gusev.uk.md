@@ -1,1 +1,0 @@
-{"photo":"a9ef920e-85f2-41bc-9a79-a84664e9a645","slug":"gusev","tag":"driver","title":"Гусев Андрій Володимирович","translations":[{"id":6,"languages_code":"uk","name":"Гусев Андрій Володимирович","stuff_slug":"gusev"}]}

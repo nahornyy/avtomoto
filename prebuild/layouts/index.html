@@ -130,28 +130,53 @@ site.Params.api_url) }}
 
 
 <!-- укр язык -->
+<!-- укр язык opengraph-->
 {{ with resources.GetRemote (printf
-    "%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*"
-    site.Params.api_url) }}
-    {{ $posts := unmarshal .Content }}
-    
-    {{ range $posts.data }}
-    {{ $content :=  .translations }}
-    {{ $name := 0 }}
-        {{ range $content }}
-            {{ $name =  .name }}
-        {{ end }}
-    {{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
-    {{ $metaJson := jsonify $meta }}
-    {{ $output := printf "%s" $metaJson }}
-    {{ $filename := printf "content/stuff/%s.md" .slug }}
-    {{ $resource := resources.FromString $filename $output  }}
-    {{ $file := $resource.RelPermalink }}
-    
-    {{ end }}
-    {{ end }}
+"%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*"
+site.Params.api_url) }}
+{{ $posts := unmarshal .Content }}
 
-<!-- рус язык -->
+{{ range $posts.data }}
+{{ $content :=  .translations }}
+{{ $name := 0 }}
+{{ $images := 0 }}
+  {{ range $content }}
+   {{ $name =  .name }}
+  {{ end }}
+            {{ $url := "https://directus.cynic.club/assets/" }}
+            {{ $file := .photo.id }}
+            {{ $url := print $url $file}}
+            {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
+            {{ with resources.GetRemote $url $opts}}
+            {{ with .Err }}
+            {{ errorf "%s" . }}
+            {{ else }}
+
+
+
+            {{ $images = .RelPermalink }}
+
+            {{ end }}
+            {{ else }}
+            {{ errorf "Unable to get remote resource %q" $url }}
+            {{ end }}
+
+
+
+
+{{ $meta := dict "slug" .slug "feature_images" $images "image" .photo.filename_disk "title" $name "tag" .tag}}
+
+{{ $metaJson := jsonify $meta }}
+
+{{ $output := printf "%s" $metaJson }}
+{{ $filename := printf "content/stuff/%s.md" .slug }}
+{{ $resource := resources.FromString $filename $output  }}
+{{ $file := $resource.RelPermalink }}
+
+{{ end }}
+{{ end }}
+
+<!-- рус язык opengraph-->
 {{ with resources.GetRemote (printf
 "%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*"
 site.Params.api_url) }}
@@ -160,10 +185,27 @@ site.Params.api_url) }}
 {{ range $posts.data }}
 {{ $content :=  .translations }}
 {{ $name := 0 }}
-    {{ range $content }}
-        {{ $name =  .name }}
-    {{ end }}
-{{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
+{{ $images := 0 }}
+{{ range $content }}
+{{ $name =  .name }}
+{{ end }}
+{{ $url := "https://directus.cynic.club/assets/" }}
+{{ $file := .photo.id }}
+{{ $url := print $url $file}}
+{{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
+{{ with resources.GetRemote $url $opts}}
+{{ with .Err }}
+{{ errorf "%s" . }}
+{{ else }}
+{{ $images = .RelPermalink }}
+{{ end }}
+{{ else }}
+{{ errorf "Unable to get remote resource %q" $url }}
+{{ end }}
+
+
+
+{{ $meta := dict "slug" .slug "feature_images" $images "image" .photo.filename_disk "title" $name "tag" .tag}}
 {{ $metaJson := jsonify $meta }}
 {{ $output := printf "%s" $metaJson }}
 {{ $filename := printf "content/stuff/%s.ru.md" .slug }}
@@ -172,6 +214,7 @@ site.Params.api_url) }}
 
 {{ end }}
 {{ end }}
+
 
 
 <!-- преподаватели -->

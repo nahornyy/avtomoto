@@ -1,1 +1,0 @@
-{"photo":"3c0de787-82f7-400e-a4c0-4e975f6d74da","slug":"miheenko","tag":"teacher","title":"Михеєнко Микола Іванович","translations":[{"id":19,"languages_code":"uk","name":"Михеєнко Микола Іванович","stuff_slug":"miheenko"}]}

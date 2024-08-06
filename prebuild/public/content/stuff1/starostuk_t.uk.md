@@ -1,1 +1,0 @@
-{"photo":"1331f3b8-3676-4430-964d-60714eeecf70","slug":"starostuk_t","tag":"teacher","title":"Старостюк Сергій Миколайович","translations":[{"id":23,"languages_code":"uk","name":"Старостюк Сергій Миколайович","stuff_slug":"starostuk_t"}]}

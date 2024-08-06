@@ -1,1 +1,1 @@
-{"image":"7d0637d1-b3cc-446c-a750-63fa4c60cfaa.jpg","slug":"kudrik","tag":"driver","title":"Кудрик Наталія Володимирівна"}
+{"feature_images":"/kudrik_1603009341359976860.jpg","image":"7d0637d1-b3cc-446c-a750-63fa4c60cfaa.jpg","slug":"kudrik","tag":"driver","title":"Кудрик Наталія Володимирівна"}
