@@ -4,63 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c96928e2-991c-4af2-9de9-6e5588a30776" name="Changes" comment="web storm">
+    <list default="true" id="c96928e2-991c-4af2-9de9-6e5588a30776" name="Changes" comment="разбирался с опенграф">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/layouts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/layouts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/garyga.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/garyga.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/garyga.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/garyga.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/gusev.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/gusev.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/gusev.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/gusev.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/ignatenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/ignatenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/ignatenko.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/ignatenko.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/kirichenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/kirichenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/kirichenko.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/kirichenko.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/kudrik.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/kudrik.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/kudrik.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/kudrik.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/lapa.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/lapa.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/lapa.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/lapa.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/lovakov.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/lovakov.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/lovakov.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/lovakov.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/lugina.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/lugina.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/lugina.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/lugina.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/miheenko.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/miheenko.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/miheenko.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/miheenko.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/starostuk_t.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/starostuk_t.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/starostuk_t.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/starostuk_t.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/starustuk_d.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/starustuk_d.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff/starustuk_d.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/content/stuff/starustuk_d.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/garyga.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/garyga.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/gusev.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/gusev.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/ignatenko.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/ignatenko.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/ivanov.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/ivanov.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/kirichenko.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/kirichenko.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/kudrik.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/kudrik.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/lapa.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/lapa.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/lovakov.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/lovakov.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/lugina.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/lugina.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/miheenko.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/miheenko.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/petrov.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/petrov.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/starostuk_t.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/starostuk_t.uk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/starustuk_d.ru.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/public/content/stuff1/starustuk_d.uk.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/prebuild/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/partials/opengraph.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/my_theme/layouts/partials/opengraph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/stuff.old/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/stuff.old/single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/stuff1/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/stuff1/single.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,8 +47,8 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Merge Requests" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23776042" />
-      <window_info id="Commit" order="1" weight="0.32984102" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20173612" />
+      <window_info id="Commit" order="1" weight="0.23776042" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
@@ -109,7 +56,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.3295756" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.31490386" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.26055557" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
@@ -141,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722797849201</updated>
       <workItem from="1722797853015" duration="1850000" />
-      <workItem from="1722932355093" duration="11632000" />
+      <workItem from="1722932355093" duration="18217000" />
     </task>
     <task id="LOCAL-00001" summary="web storm">
       <option name="closed" value="true" />
@@ -159,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722798160713</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="разбирался с опенграф">
+      <option name="closed" value="true" />
+      <created>1722950266948</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722950266948</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +122,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="del public" />
+    <MESSAGE value="немного причесал stuff" />
     <MESSAGE value="web storm" />
-    <option name="LAST_COMMIT_MESSAGE" value="web storm" />
+    <MESSAGE value="разбирался с опенграф" />
+    <option name="LAST_COMMIT_MESSAGE" value="разбирался с опенграф" />
   </component>
 </project>
