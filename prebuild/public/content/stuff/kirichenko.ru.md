@@ -1,1 +1,0 @@
-{"feature_images":"/kirichenko_10573328195523281041.jpg","image":"52c3195f-9d5d-49df-bd90-85d99033333e.jpg","slug":"kirichenko","tag":"driver","title":"Кириченко Сергей Владимирович"}

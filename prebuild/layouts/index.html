@@ -143,28 +143,11 @@ site.Params.api_url) }}
   {{ range $content }}
    {{ $name =  .name }}
   {{ end }}
-            {{ $url := "https://directus.cynic.club/assets/" }}
-            {{ $file := .photo.id }}
-            {{ $url := print $url $file}}
-            {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
-            {{ with resources.GetRemote $url $opts}}
-            {{ with .Err }}
-            {{ errorf "%s" . }}
-            {{ else }}
-
-
-
-            {{ $images = .RelPermalink }}
-
-            {{ end }}
-            {{ else }}
-            {{ errorf "Unable to get remote resource %q" $url }}
-            {{ end }}
 
 
 
 
-{{ $meta := dict "slug" .slug "feature_images" $images "image" .photo.filename_disk "title" $name "tag" .tag}}
+{{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
 
 {{ $metaJson := jsonify $meta }}
 
@@ -189,23 +172,11 @@ site.Params.api_url) }}
 {{ range $content }}
 {{ $name =  .name }}
 {{ end }}
-{{ $url := "https://directus.cynic.club/assets/" }}
-{{ $file := .photo.id }}
-{{ $url := print $url $file}}
-{{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
-{{ with resources.GetRemote $url $opts}}
-{{ with .Err }}
-{{ errorf "%s" . }}
-{{ else }}
-{{ $images = .RelPermalink }}
-{{ end }}
-{{ else }}
-{{ errorf "Unable to get remote resource %q" $url }}
-{{ end }}
+{
 
 
 
-{{ $meta := dict "slug" .slug "feature_images" $images "image" .photo.filename_disk "title" $name "tag" .tag}}
+{{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
 {{ $metaJson := jsonify $meta }}
 {{ $output := printf "%s" $metaJson }}
 {{ $filename := printf "content/stuff/%s.ru.md" .slug }}
@@ -217,30 +188,6 @@ site.Params.api_url) }}
 
 
 
-<!-- преподаватели -->
-<!-- рус язык -->
-{{ with resources.GetRemote (printf
-"%s/items/stuff?fields[]=*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*"
-site.Params.api_url) }}
-{{ $pages := unmarshal .Content }}
-{{ range $pages.data }}
-{{ $output := jsonify . }}
-{{ $filename := printf "content/stuff1/%s.ru.md" .slug }}
-{{ $resource := resources.FromString $filename $output }}
-{{ $file := $resource.RelPermalink }}
-{{ end }}
-{{ end }}
 
 
-<!-- укр язык -->
-{{ with resources.GetRemote (printf
-"%s/items/stuff?fields[]=*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*"
-site.Params.api_url) }}
-{{ $pages := unmarshal .Content }}
-{{ range $pages.data }}
-{{ $output := jsonify . }}
-{{ $filename := printf "content/stuff1/%s.uk.md" .slug }}
-{{ $resource := resources.FromString $filename $output }}
-{{ $file := $resource.RelPermalink }}
-{{ end }}
-{{ end }}
+

@@ -1,1 +1,0 @@
-{"feature_images":"/gusev_17065053856399415304.jpg","image":"a9ef920e-85f2-41bc-9a79-a84664e9a645.jpg","slug":"gusev","tag":"driver","title":"Гусев Андрей Владимирович"}

@@ -26,17 +26,12 @@
         {{ $url := "https://directus.cynic.club/assets/" }}
         {{ $file := .Params.image }}
         {{ $url := print $url $file}}
+        {{ $path := .Path }}
+        {{ $path := print $path "/feature.jpg" }}
         {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
-        {{ with resources.GetRemote $url $opts}}
-        {{ with .Err }}
-        {{ errorf "%s" . }}
-        {{ else }}
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}" >
-        {{ end }}
-        {{ else }}
-        {{ errorf "Unable to get remote resource %q" $url }}
-        {{ end }}
-
+        {{ $img := resources.GetRemote $url $opts }}
+        {{ $img := $img.Content | resources.FromString $path }}
+        <img src="{{ $img.RelPermalink }}"  alt="{{ $alt }}" >
       </div>
     </div>
     <div class="uk-width-expand@m">
