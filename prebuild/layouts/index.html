@@ -139,15 +139,17 @@ site.Params.api_url) }}
 {{ range $posts.data }}
 {{ $content :=  .translations }}
 {{ $name := 0 }}
+{{ $description := 0 }}
 {{ $images := 0 }}
   {{ range $content }}
    {{ $name =  .name }}
+   {{ $description = .description }}
   {{ end }}
 
 
 
 
-{{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
+{{ $meta := dict "slug" .slug "description" $description "image" .photo.filename_disk "title" $name "tag" .tag}}
 
 {{ $metaJson := jsonify $meta }}
 
@@ -168,15 +170,17 @@ site.Params.api_url) }}
 {{ range $posts.data }}
 {{ $content :=  .translations }}
 {{ $name := 0 }}
+{{ $description := 0 }}
 {{ $images := 0 }}
-{{ range $content }}
-{{ $name =  .name }}
-{{ end }}
+        {{ range $content }}
+        {{ $name =  .name }}
+        {{ $description = .description }}
+        {{ end }}
 {
 
 
 
-{{ $meta := dict "slug" .slug "image" .photo.filename_disk "title" $name "tag" .tag}}
+{{ $meta := dict "slug" .slug "description" $description "image" .photo.filename_disk "title" $name "tag" .tag}}
 {{ $metaJson := jsonify $meta }}
 {{ $output := printf "%s" $metaJson }}
 {{ $filename := printf "content/stuff/%s.ru.md" .slug }}
