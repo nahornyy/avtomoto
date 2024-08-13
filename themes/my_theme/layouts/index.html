@@ -220,7 +220,7 @@
                 <div class="uk-card-body">
                     <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
                     <div>
-                        <progress class="uk-progress" max="24" value="18"></progress>
+                        <progress class="uk-progress" max="24" value="4"></progress>
                     </div>
 
                 </div>
@@ -279,9 +279,11 @@
 
 <div class="uk-container uk-container-lage">
     <!--Комментарии-->
-    <h2 class="uk-h2 uk-heading-divider uk-text-center">{{ .Params.comments }}</h2>
-    <div class="uk-column-1-2@s uk-column-1-3@m uk-column-1-4@l">
-        <div class="remark42__last-comments" data-max="40"></div>
+    <h3 class="uk-h3 uk-heading-divider uk-font-primary uk-text-primary uk-text-danger uk-margin uk-text-center uk-margin-top "
+        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">{{ .Params.comments }}</h3>
+
+    <div class="uk-column-1-1@s uk-column-1-2@m uk-column-1-3@l" >
+        <div class="remark42__last-comments" data-max="20" uk-scrollspy="cls: uk-animation-slide-right; target: .comment__body; delay: 100; repeat: true"></div>
     </div>
 
     <script>

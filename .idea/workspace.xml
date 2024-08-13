@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c96928e2-991c-4af2-9de9-6e5588a30776" name="Changes" comment="разбирался с опенграф">
-      <change afterPath="$PROJECT_DIR$/themes/my_theme/layouts/_default/sitemap.xml" afterDir="false" />
+    <list default="true" id="c96928e2-991c-4af2-9de9-6e5588a30776" name="Changes" comment="сделал сайтмап">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/additional_lessons.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/additional_lessons.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/classes.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/classes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/classes.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/classes.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/drivers.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/drivers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/drivers.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/drivers.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/practical.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/practical.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/practical.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/practical.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/program.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/program.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/services/program.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/services/program.ru.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prebuild/layouts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/prebuild/layouts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/partials/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/my_theme/layouts/partials/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/i18n/ru.toml" beforeDir="false" afterPath="$PROJECT_DIR$/i18n/ru.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/my_theme/layouts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/stuff/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/my_theme/layouts/stuff/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/my_theme/layouts/stuff/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/my_theme/layouts/stuff/single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -55,21 +49,21 @@
 }</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
-      <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
+      <window_info id="Bookmarks" side_tool="true" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
-      <window_info id="Pull Requests" show_stripe_button="false" />
+      <window_info id="Pull Requests" />
       <window_info id="Merge Requests" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17578125" />
-      <window_info id="Commit" order="1" weight="0.14557292" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14920521" />
+      <window_info id="Commit" order="1" sideWeight="0.5006906" weight="0.17578125" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.14895833" />
+      <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.3295756" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.23701923" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.23701923" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.5609879" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
@@ -104,7 +98,9 @@
       <workItem from="1722932355093" duration="18357000" />
       <workItem from="1723007384290" duration="10251000" />
       <workItem from="1723028593198" duration="275000" />
-      <workItem from="1723093070480" duration="358000" />
+      <workItem from="1723093070480" duration="4676000" />
+      <workItem from="1723225604477" duration="2074000" />
+      <workItem from="1723539934980" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="web storm">
       <option name="closed" value="true" />
@@ -146,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723015926194</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="сделал сайтмап">
+      <option name="closed" value="true" />
+      <created>1723093678121</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723093678121</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +161,7 @@
     <MESSAGE value="немного причесал stuff" />
     <MESSAGE value="web storm" />
     <MESSAGE value="разбирался с опенграф" />
-    <option name="LAST_COMMIT_MESSAGE" value="разбирался с опенграф" />
+    <MESSAGE value="сделал сайтмап" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделал сайтмап" />
   </component>
 </project>

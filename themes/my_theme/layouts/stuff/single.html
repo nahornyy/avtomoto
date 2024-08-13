@@ -25,9 +25,11 @@
       <div>
         {{ $url := "https://directus.cynic.club/assets/" }}
         {{ $file := .Params.image }}
-        {{ $url := print $url $file}}
+        {{ $key := "?key4" }}
+        {{ $url := print $url $file $key}}
+
         {{ $path := .Path }}
-        {{ $path := print $path "/feature.jpg" }}
+        {{ $path := print $path "/feature.webp" }}
         {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
         {{ $img := resources.GetRemote $url $opts }}
         {{ $img := $img.Content | resources.FromString $path }}

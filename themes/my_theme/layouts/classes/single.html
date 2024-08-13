@@ -60,7 +60,8 @@
 
 
       <h4 class="uk-heading-bullet uk-text-muted">{{ T "gallery"}}</h4>
-      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+      <!-- галерря на компе -->
+      <div class="uk-position-relative uk-visible-toggle uk-light uk-visible@m" tabindex="-1"
         uk-slideshow="ratio: 4:3; animation: pull">
         <div class="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom: 30">
           {{ range .Params.gallery }}
@@ -74,7 +75,7 @@
           {{ with resources.GetRemote $url $opts}}
 
           <div>
-            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"  alt="Автошкола Чернигов" uk-cover>
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"  alt="Автошкола Чернигов">
           </div>
 
           {{ end }}
@@ -87,6 +88,35 @@
 
       </div>
 
+    </div>
+    <div class="uk-width-expand uk-hidden@m">
+          <!-- галлерея на мобильном -->
+          <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1"
+          uk-slideshow="animation: pullc; ratio: 4:3; min-height: 400px">
+          <div class="uk-slideshow-items uk-background-cover" >
+            {{ range .Params.gallery }}
+            {{ $url := "http://10.100.10.10:8055/assets/"}}
+            {{ $file := .directus_files_id}}
+            {{ $key := "?key=key5"}}
+  
+            {{ $url := print $url $file $key}}
+            {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
+  
+            {{ with resources.GetRemote $url $opts}}
+  
+            <div>
+              <img  src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Автошкола Чернигов">
+            </div>
+  
+            {{ end }}
+            {{ end }}
+          </div>
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous
+            uk-slideshow-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next
+            uk-slideshow-item="next"></a>
+  
+        </div>
     </div>
   </div>
 
