@@ -205,15 +205,14 @@
 
                         </div>
                         <div class="uk-width-expand">
+                            {{ with .Site.GetPage "/booking_practic" }}   
+                            
 
+                            <h3 class="uk-card-title uk-margin-remove-bottom">{{ T "practic" }}</h3>
 
-                            <h3 class="uk-card-title uk-margin-remove-bottom">{{ T
-                                "practic" }}</h3>
+                            <p class="uk-text-meta uk-margin-remove-top">{{ .Params.subtitle1}}</p>
 
-                            <p class="uk-text-meta uk-margin-remove-top">Практичні заняття після складання теоретичного іспиту в сервісному
-                                центрі МВС (самопідготовки)</p>
-
-
+                            {{ end }}
                         </div>
                     </div>
                 </div>
@@ -225,7 +224,7 @@
 
                 </div>
                 <div class="uk-card-footer">
-                   <a class="uk-button uk-button-text uk-align-right" href="{{ .Site.LanguagePrefix }}/booking">{{ T "reg"}}</a>
+                   <a class="uk-button uk-button-text uk-align-right" href="{{ .Site.LanguagePrefix }}/booking_practic">{{ T "reg"}}</a>
 
                 </div>
                 

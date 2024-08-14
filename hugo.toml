@@ -36,9 +36,14 @@ enableRobotsTXT = true
         weight = 10
       [[languages.uk.menus.main]]
         parent = 'Навчання'
+        name = 'Реєстрація на практичну підготовку'
+        pageRef = '/booking_practic'
+        weight = 20
+      [[languages.uk.menus.main]]
+        parent = 'Навчання'
         name = 'Необхідні документи'
         pageRef = '/docs'
-        weight = 20             
+        weight = 30             
       [[languages.uk.menus.main]]
         parent = 'Про автошколу'
         identifier = 'classes'
@@ -85,9 +90,14 @@ enableRobotsTXT = true
         weight = 10
       [[languages.ru.menus.main]]
         parent = 'Обучение'
+        name = 'Регистрация на практическую подготовку'
+        pageRef = '/booking_practic'
+        weight = 20
+      [[languages.ru.menus.main]]
+        parent = 'Обучение'
         name = 'Необходимые документы'
         pageRef = '/docs'
-        weight = 20          
+        weight = 30          
       [[languages.ru.menus.main]]
         parent = 'Про автошколу'
         name = 'Классы'
@@ -130,3 +140,5 @@ enableRobotsTXT = true
     source = "prebuild/public/content/stuff"
     target = "content/stuff"
 
+[sitemap]
+  changeFreq = 'monthly'
