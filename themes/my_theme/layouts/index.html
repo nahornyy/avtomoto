@@ -72,6 +72,7 @@
 
         {{ range (where .Site.Pages "Section" "classes") }}
         {{ range .Pages }}
+        {{ $title := .Page.Title }}
         <div>
             <div class="uk-card uk-card-default uk-card-hover uk-card-small">
 
@@ -88,7 +89,7 @@
                             {{ with .Err }}
                             {{ errorf "%s" . }}
                             {{ else }}
-                            <img alt="" class="uk-border-circle" height="{{ .Height }}" height="100"
+                            <img alt="{{ $title }}" class="uk-border-circle" height="{{ .Height }}" height="100"
                                  src="{{ .RelPermalink }}" width="100" width="{{ .Width }}">
                             {{ end }}
                             {{ else }}
@@ -199,7 +200,7 @@
 
                             {{ $image := resources.Get "images/driver.png" }}
                             {{ $image := $image.Crop "1000x1000" }}
-                            <img alt="" class="uk-border-circle" height="100" src="{{ $image.RelPermalink }}"
+                            <img alt="Практична підготовка" class="uk-border-circle" height="100" src="{{ $image.RelPermalink }}"
                                  width="100">
 
 

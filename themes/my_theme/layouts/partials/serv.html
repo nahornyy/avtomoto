@@ -20,7 +20,7 @@
             {{ range .Pages }}
             <div class=" uk-child-width-expand uk-grid uk-margin-remove-top" uk-grid>
                 <div class="uk-width-auto@m uk-first-column">
-                    <img class="uk-align-center uk-margin-top" src="{{ .Params.image }}" width="100">
+                    <img class="uk-align-center uk-margin-top" src="{{ .Params.image }}" width="100" alt="{{ .Title}}">
                 </div>
                 <div class="uk-margin-remove-first-child uk-margin-top">
                     <h3 class="uk-card-title uk-h4 uk-heading-divider uk-text-primary">{{ .Title}}</h3>

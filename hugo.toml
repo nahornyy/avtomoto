@@ -3,11 +3,15 @@ defaultContentLanguage = 'uk'
 timezone = 'Europe/Kyiv'
 theme = 'my_theme'
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "taxonomyTerm"]
 [params]
     api_url = "http://10.100.10.10:8055"
     api_auth = "Bearer 0WMIqchUCg-pWLsyOFxKOYnvBveTODTZ"
     title = 'Автошкола в місті Чернігів'
     description = 'Автошкола в місті Чернігів. Теоретичне та практичне навчання. Заочні та очні заняття'
+    author = "Ihor Nahornyy"
+    copyright = "Ihor Nahornyy"
+    logo = "/images/main.webp"
 [languages]
   [languages.uk]
     languageCode = 'uk'
@@ -142,3 +146,4 @@ enableRobotsTXT = true
 
 [sitemap]
   changeFreq = 'monthly'
+

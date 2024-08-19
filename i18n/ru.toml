@@ -63,6 +63,10 @@ other = "Все"
 
 [practic]
 other = "Практическая подготовка"
+
+[reg_button_practic]
+other = "Регистрация на практическую подготовку"
+
 [services]
 other = "Услуги"
 

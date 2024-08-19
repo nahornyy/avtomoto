@@ -18,6 +18,7 @@
   <div class="uk-child-width-expand@m" uk-grid>
 
     {{ range .Pages }}
+    {{ $title := .Page.Title }}
     
     <div class="uk-text-center">
 
@@ -36,7 +37,7 @@
             {{ with .Err }}
               {{ errorf "%s" . }}
             {{ else }}
-              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $title }}">
             {{ end }}
           {{ else }}
             {{ errorf "Unable to get remote resource %q" $url }}
