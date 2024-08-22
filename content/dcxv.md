@@ -2,4 +2,4 @@
 layout = 'dcxv'
 +++
 
-{{ $data := getJSON "https://example.org/books.json" }}
+{{ $data := resources.Get "https://example.org/books.json" }}

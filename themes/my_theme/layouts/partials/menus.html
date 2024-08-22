@@ -46,7 +46,7 @@
                         <a href="#">{{ T "language"}}</a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                {{ if .Site.IsMultiLingual }}
+                                {{ if hugo.IsMultilingual }}
                                     {{ range .Site.Languages }}
                                     {{ if eq . $.Site.Language }}
                                         <li  class="uk-active"><a href="#" class="active language">{{ .LanguageName }}</a></li>
@@ -145,7 +145,7 @@
                 <a href="#">{{ T "language"}}</a>
                 <div>
                     <ul class="uk-nav-sub">
-                        {{ if .Site.IsMultiLingual }}
+                        {{ if hugo.IsMultilingual }}
                             {{ range .Site.Languages }}
                             {{ if eq . $.Site.Language }}
                                 <li  class="uk-active"><a href="#" class="active language">{{ .LanguageName }}</a></li>

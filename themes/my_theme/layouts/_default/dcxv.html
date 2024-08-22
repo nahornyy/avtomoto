@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $data := getJSON "https://n8n.cynic.club/webhook/8f43e13a-188b-417c-baed-f0e81408788c" }}
+{{ $data := resources.GetRemote "https://n8n.cynic.club/webhook/8f43e13a-188b-417c-baed-f0e81408788c"  | transform.Unmarshal }}
 
 
 
