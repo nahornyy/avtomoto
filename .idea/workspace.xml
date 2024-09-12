@@ -53,7 +53,7 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
       <window_info id="Merge Requests" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14920521" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10755208" />
       <window_info id="Commit" order="1" sideWeight="0.5006906" weight="0.17578125" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.14895833" />
       <window_info anchor="bottom" id="TODO" />
@@ -63,7 +63,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.23701923" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.5609879" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.53509617" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
@@ -100,7 +100,7 @@
       <workItem from="1723028593198" duration="275000" />
       <workItem from="1723093070480" duration="4676000" />
       <workItem from="1723225604477" duration="2074000" />
-      <workItem from="1723539934980" duration="70000" />
+      <workItem from="1723539934980" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary="web storm">
       <option name="closed" value="true" />
