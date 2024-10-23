@@ -1,6 +1,6 @@
 +++
 title = 'Дякуемо за реєстрацію!'
-date = 'now'
+# date = 'now'
 layout = 'registration'
 +++
 Наш менеджер зв’яжеться з Вами
