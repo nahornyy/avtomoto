@@ -45,19 +45,15 @@
                     <li>
                         <a href="#">{{ T "language"}}</a>
                         <div class="uk-navbar-dropdown">
+                            {{ with .Translations }}
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                {{ if hugo.IsMultilingual }}
-                                    {{ range .Site.Languages }}
-                                    {{ if eq . $.Site.Language }}
-                                        <li  class="uk-active"><a href="#" class="active language">{{ .LanguageName }}</a></li>
-                                    {{ else }}
-                                        {{ range $.Translations }}
-                                        <li><a href="{{ .Permalink }}" class="">{{ .Language.LanguageName }}</a></li>
-                                        {{ end }}
-                                    {{ end }}
-                                    {{ end }}
+                                {{ range . }}
+                                <li>
+                                    <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a>
+                                </li>
                                 {{ end }}
                             </ul>
+                            {{ end }}
                         </div>
                     </li>
                 </ul>
@@ -144,19 +140,15 @@
             <li>
                 <a href="#">{{ T "language"}}</a>
                 <div>
+                    {{ with .Translations }}
                     <ul class="uk-nav-sub">
-                        {{ if hugo.IsMultilingual }}
-                            {{ range .Site.Languages }}
-                            {{ if eq . $.Site.Language }}
-                                <li  class="uk-active"><a href="#" class="active language">{{ .LanguageName }}</a></li>
-                            {{ else }}
-                                {{ range $.Translations }}
-                                <li><a href="{{ .Permalink }}" class="">{{ .Language.LanguageName }}</a></li>
-                                {{ end }}
-                            {{ end }}
-                            {{ end }}
+                        {{ range . }}
+                        <li>
+                            <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a>
+                        </li>
                         {{ end }}
                     </ul>
+                    {{ end }}
                 </div>
             </li>
         </ul>

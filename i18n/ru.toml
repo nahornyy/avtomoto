@@ -73,3 +73,9 @@ other = "Услуги"
 
 [cat]
 other = "Категория"
+
+[termin]
+other = "Срок обучения"
+
+[month]
+other = "месяц"

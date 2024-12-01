@@ -73,3 +73,9 @@ other = "Категорія"
 
 [reg_button_practic]
 other = "Реєстрація на практику"
+
+[termin]
+other = "Термін навчання"
+
+[month]
+other = "мiсяць"

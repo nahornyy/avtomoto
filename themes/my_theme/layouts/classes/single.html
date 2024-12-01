@@ -19,7 +19,7 @@
   <div class="uk-text-left uk-margin-top" uk-grid>
 
     <div class="uk-width-1-3@m">
-      <div class="">
+      <div>
         <h4 class="uk-heading-bullet uk-text-muted">{{ T "location" }}</h4>
         <div style="width: 100%">
           <iframe width="100%" height="300"
@@ -32,6 +32,10 @@
         <p class="uk-text-center">{{ .Params.form }}</p>
         <h4 class="uk-heading-bullet uk-text-muted">{{ T "date_of_studing"}}</h4>
         <p class="uk-text-center">{{ time.Format ":date_long" .Params.new_date }}</p>
+
+        <h4 class="uk-heading-bullet uk-text-muted">{{ T "termin"}}</h4>
+        <p class="uk-text-center">1 {{ T "month"}}</p>
+        
         <h4 class="uk-heading-bullet uk-text-muted">{{ T "schedule"}}</h4>
         <div class="uk-grid-small" uk-grid>
 
