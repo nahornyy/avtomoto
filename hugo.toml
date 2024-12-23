@@ -1,7 +1,7 @@
 baseURL = 'https://avtomoto25.cn.ua/'
 defaultContentLanguage = 'uk'
 timezone = 'Europe/Kyiv'
-theme = 'my_theme'
+theme = 'uikit'
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 [params]
