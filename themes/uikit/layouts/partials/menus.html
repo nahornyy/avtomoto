@@ -30,10 +30,14 @@
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     {{ range .Children }}
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                        <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}"
-                                            href="{{ .URL }}">
-                                            {{ .Name }}
-                                        </a>
+                                        
+                                        {{ if .Params.external }}
+                                        <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}" href="{{ .URL }}" rel="external" target="_blank">{{ .Name }}</a>
+                                        {{ else }}
+                                        <a href="{{ .URL }}">{{ .Name }}</a>
+                                         {{ end }}
+                                       
+ 
                                     </li>
                                     {{ end }}
                                 </ul>

@@ -47,7 +47,15 @@ disableKinds = ["taxonomy", "term"]
         parent = 'Навчання'
         name = 'Необхідні документи'
         pageRef = '/docs'
-        weight = 30             
+        weight = 30      
+      [[languages.uk.menus.main]]
+        parent = 'Навчання'
+        name = 'Офіційні тести ПДР'
+        url = 'https://pdr.infotech.gov.ua/'
+        weight = 40
+          [languages.uk.menus.main.params]
+          external = true
+         
       [[languages.uk.menus.main]]
         parent = 'Про автошколу'
         identifier = 'classes'
@@ -101,7 +109,15 @@ disableKinds = ["taxonomy", "term"]
         parent = 'Обучение'
         name = 'Необходимые документы'
         pageRef = '/docs'
-        weight = 30          
+        weight = 30
+      [[languages.ru.menus.main]]
+        parent = 'Обучение'
+        name = 'Официальные тесты ПДД'
+        url = 'https://pdr.infotech.gov.ua/'
+        weight = 40   
+          [languages.ru.menus.main.params]
+          external = true
+  
       [[languages.ru.menus.main]]
         parent = 'Про автошколу'
         name = 'Классы'
