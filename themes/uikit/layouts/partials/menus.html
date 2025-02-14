@@ -129,10 +129,14 @@
                         <ul class="uk-nav-sub">
                             {{ range .Children }}
                             <li class="uk-parent">
+
+                                {{ if .Params.external }}
                                 <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}"
-                                    href="{{ .URL }}">
-                                    {{ .Name }}
-                                </a>
+                                    href="{{ .URL }}" rel="external" target="_blank">{{ .Name }}</a>
+                                {{ else }}
+                                <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}"
+                                    href="{{ .URL }}">{{ .Name }}</a>
+                                {{ end }}
                             </li>
                             {{ end }}
                         </ul>
