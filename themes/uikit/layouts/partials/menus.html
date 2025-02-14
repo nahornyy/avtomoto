@@ -30,14 +30,15 @@
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     {{ range .Children }}
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                        
+
                                         {{ if .Params.external }}
-                                        <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}" href="{{ .URL }}" rel="external" target="_blank">{{ .Name }}</a>
+                                        <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}"
+                                            href="{{ .URL }}" rel="external" target="_blank">{{ .Name }}</a>
                                         {{ else }}
                                         <a href="{{ .URL }}">{{ .Name }}</a>
-                                         {{ end }}
-                                       
- 
+                                        {{ end }}
+
+
                                     </li>
                                     {{ end }}
                                 </ul>
@@ -53,7 +54,8 @@
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 {{ range . }}
                                 <li>
-                                    <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a>
+                                    <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">{{
+                                        .Language.LanguageName }}</a>
                                 </li>
                                 {{ end }}
                             </ul>
@@ -99,8 +101,7 @@
                     </a>
                 </div>
                 <a href="/" aria-label="Back to home" class="uk-logo uk-navbar-item">
-                    <img alt="{{ .Site.Title }}" loading="eager" width="242" height="25"
-                        src="/images/logo_h_25-1.svg">
+                    <img alt="{{ .Site.Title }}" loading="eager" width="242" height="25" src="/images/logo_h_25-1.svg">
                 </a>
             </div>
         </div>
@@ -148,7 +149,8 @@
                     <ul class="uk-nav-sub">
                         {{ range . }}
                         <li>
-                            <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">{{ .Language.LanguageName }}</a>
+                            <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">{{
+                                .Language.LanguageName }}</a>
                         </li>
                         {{ end }}
                     </ul>
