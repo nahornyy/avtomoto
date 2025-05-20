@@ -33,10 +33,10 @@
           {{ $key := "?key=key1"}}
           {{ $url := print $url $file $key}}
           {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
-          {{ with resources.GetRemote $url $opts}}
+          {{ with try (resources.GetRemote $url $opts) }}
             {{ with .Err }}
               {{ errorf "%s" . }}
-            {{ else }}
+            {{ else  with .Value}}
               <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $title }}">
             {{ end }}
           {{ else }}
