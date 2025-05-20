@@ -1,10 +1,19 @@
 {{ define "main" }}
 
-<div class="uk-cover-container">
+<div class="uk-container uk-container-large uk-margin-top">
 
-<iframe  src="https://nocodb.cynic.club/dashboard/#/nc/form/c2c69a94-a3f0-4f5b-b1bd-5c4d54d191b0" width="100%" height="550" style="border: none;"></iframe>
+<ul uk-tab>
+    <li><a href="#">Дата</a></li>
+    <li><a href="#">Расписание</a></li>
+    <li><a href="#">Заполнение групп</a></li>
+    
+</ul>
 
-<iframe src="https://nocodb.cynic.club/dashboard/#/nc/form/ac4874ac-582c-454f-8a9e-223b10b5a56e" width="100%" height="900" style="border: none;"></iframe>
+<div class="uk-switcher uk-margin">
+    <div><iframe src="https://nocodb.cynic.club/dashboard/#/nc/form/c2c69a94-a3f0-4f5b-b1bd-5c4d54d191b0" width="100%" height="550" style="border: none;"></iframe></div>
+    <div><iframe src="https://nocodb.cynic.club/dashboard/#/nc/form/ac4874ac-582c-454f-8a9e-223b10b5a56e" width="100%" height="850" style="border: none;"></iframe></div>
+    <div><iframe src="https://nocodb.cynic.club/dashboard/#/nc/form/7fedcdca-acf3-467b-8f1c-51467ac927b0" width="100%" height="850" style="border: none;"></iframe></div>
+</div>
 
 </div>
 {{ end }}
