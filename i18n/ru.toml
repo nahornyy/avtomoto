@@ -79,3 +79,6 @@ other = "Срок обучения"
 
 [month]
 other = "месяц"
+
+[practic_date]
+other = "постоянно"

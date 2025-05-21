@@ -76,7 +76,7 @@
         {{ $title := .Page.Title }}
         <div>
             <div class="uk-card uk-card-default uk-card-hover uk-card-small">
-                
+                <!--<div class="uk-card-badge uk-label uk-label-danger">{{ time.Format ":date_long" .Params.new_date }}</div>-->
                 <div class="uk-card-header">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div class="uk-width-auto">
@@ -103,7 +103,7 @@
 
                             <h3 class="uk-card-title uk-margin-remove-bottom">{{ .Params.title }}</h3>
 
-<!--                            <p class="uk-text-meta uk-margin-remove-top">{{ time.Format ":date_long" .Params.new_date }}</p>-->
+                            
 
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                     <div>
                         <progress class="uk-progress" max="24" value="{{ .Params.count}}"></progress>
                     </div>
-
+                    <!--<p class="uk-text-muted uk-margin-remove-top uk-text-left">{{ T "date_of_studing"}}: {{ time.Format ":date_long" .Params.new_date }}</p>-->
                 </div>
                 <div class="uk-card-footer">
                     <a class="uk-button uk-button-text uk-align-right" href="{{ .RelPermalink }}">{{ T
@@ -223,11 +223,11 @@
                     <div>
                         <progress class="uk-progress" max="24" value="4"></progress>
                     </div>
-
+                    <!--<p class="uk-text-muted uk-margin-remove-top uk-text-left">{{ T "date_of_studing"}}: {{ T "practic_date"}}</p>-->
                 </div>
                 <div class="uk-card-footer">
                    <a class="uk-button uk-button-text uk-align-right" href="{{ .Site.LanguagePrefix }}/booking_practic">{{ T "reg"}}</a>
-
+                
                 </div>
                 
             </div>
