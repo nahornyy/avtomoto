@@ -103,6 +103,7 @@
             {{ $url := "https://directus.cynic.club/assets/"}}
             {{ $file := .directus_files_id}}
             {{ $key := "?key=key5"}}
+            
   
             {{ $url := print $url $file $key}}
             {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
