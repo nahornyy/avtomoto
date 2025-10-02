@@ -103,7 +103,7 @@
             {{ $url := "https://directus.cynic.club/assets/"}}
             {{ $file := .directus_files_id}}
             {{ $key := "?key=key5"}}
-            
+
   
             {{ $url := print $url $file $key}}
             {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
@@ -113,8 +113,7 @@
             <div>
               <img  src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Автошкола Чернигов">
             </div>
-  
-            {{ end }}
+              {{ end }}
             {{ end }}
           </div>
           <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous
