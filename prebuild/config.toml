@@ -3,4 +3,4 @@ disableKinds = [ "sitemap", "taxonomy", "term" ]
 [outputs]
 home = [ "html" ]
 [params]
-  api_url = "https://directus.cynic.club"
+    api_url = "https://directus.cynic.club"
