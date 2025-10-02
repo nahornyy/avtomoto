@@ -70,7 +70,7 @@
         uk-slideshow="ratio: 4:3; animation: pull">
         <div class="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom: 30">
           {{ range .Params.gallery }}
-          {{ $url := "http://10.100.10.10:8055/assets/"}}
+          {{ $url := "https://directus.cynic.club/assets/"}}
           {{ $file := .directus_files_id}}
           {{ $key := "?key=key1"}}
 
@@ -100,7 +100,7 @@
           uk-slideshow="animation: pullc; ratio: 4:3; min-height: 400px">
           <div class="uk-slideshow-items uk-background-cover" >
             {{ range .Params.gallery }}
-            {{ $url := "http://10.100.10.10:8055/assets/"}}
+            {{ $url := "https://directus.cynic.club/assets/"}}
             {{ $file := .directus_files_id}}
             {{ $key := "?key=key5"}}
   
