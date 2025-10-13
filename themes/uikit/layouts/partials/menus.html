@@ -47,6 +47,7 @@
                         {{ end }}
                     </li>
                     {{ end }}
+
                     <li>
                         <a href="#">{{ T "language"}}</a>
                         <div class="uk-navbar-dropdown">
@@ -62,6 +63,26 @@
                             {{ end }}
                         </div>
                     </li>
+
+
+                    <!--  
+                    <li>
+                        {{ with .Translations }}
+                        {{ range . }}
+                        <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">
+
+
+                            {{ .Language.Params.LanguageNameShort }}
+
+
+
+                        </a>
+                        {{ end }}
+                        {{ end }}
+
+                    </li>
+-->
+
                 </ul>
                 <div class="uk-navbar-item">
                     <ul class="uk-flex-inline uk-flex-middle uk-flex-nowrap uk-grid-small uk-grid" uk-grid="">
@@ -146,6 +167,7 @@
             </li>
 
             {{ end }}
+
             <li>
                 <a href="#">{{ T "language"}}</a>
                 <div>
@@ -161,6 +183,24 @@
                     {{ end }}
                 </div>
             </li>
+
+            <!-- 
+            <li>
+                {{ with .Translations }}
+                {{ range . }}
+                <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}" class = "uk-text-uppercase">
+
+
+                    {{ T "language"}} {{ .Language.Params.LanguageNameShort }}
+
+
+                </a>
+                {{ end }}
+                {{ end }}
+
+            </li>
+
+ -->
         </ul>
 
 

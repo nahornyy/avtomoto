@@ -15,11 +15,12 @@ disableKinds = ["taxonomy", "term"]
 [languages]
   [languages.uk]
     languageCode = 'uk'
+    
     languageName = "Украинский"
     title = 'Автошкола Автомото25 в місті Чернігів'
     weight = 1
-
-
+    [languages.uk.params] 
+      languageNameShort = 'ua'
     [languages.uk.menus]
       [[languages.uk.menus.main]]
         name = 'Головна'
@@ -78,9 +79,12 @@ disableKinds = ["taxonomy", "term"]
   [languages.ru]
     languageCode = 'ru-UA'
     
+    
     title = 'Автошкола Автомото25 в  городе Чернигов'
     weight = 2
     languageName = "Російська"
+    [languages.ru.params] 
+      languageNameShort = 'ru'
     [languages.ru.menus]
       [[languages.ru.menus.main]]
         name = 'Главная'
