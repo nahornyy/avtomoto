@@ -34,8 +34,8 @@
             {{ $img := resources.GetRemote $url $opts }}
             {{ $img := $img.Content | resources.FromString $path }}
 
-            <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}">
-            <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+            <img class="uk-border-rounded" src="{{ $img.RelPermalink }}" alt="{{ $alt }}">
+            <div class="uk-border-rounded uk-overlay-primary uk-transition-fade uk-position-cover"></div>
             <div class="uk-position-center">
 
               <div class="uk-transition-slide-top-small">
