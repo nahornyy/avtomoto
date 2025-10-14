@@ -37,14 +37,14 @@
             {{ with .Err }}
               {{ errorf "%s" . }}
             {{ else  with .Value}}
-              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $title }}">
+              <img class="uk-border-rounded" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $title }}">
             {{ end }}
           {{ else }}
             {{ errorf "Unable to get remote resource %q" $url }}
           {{ end }}
        
 
-        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+        <div class="uk-border-rounded uk-overlay-primary uk-transition-fade uk-position-cover"></div>
         <div class="uk-position-center">
 
 
