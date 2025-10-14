@@ -9,30 +9,22 @@
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 
 
-        <nav class="uk-navbar-container"
-            uk-navbar="{&quot;align&quot;:&quot;center&quot;,&quot;container&quot;:&quot;.tm-header > [uk-sticky]&quot;,&quot;boundary&quot;:&quot;.tm-header .uk-navbar-container&quot;}">
-            <div class="uk-navbar-center" bis_skin_checked="1">
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-center">
                 <ul class="uk-navbar-nav">
                     {{ $currentPage := . }}
                     {{- range site.Menus.main }}
-                    <li>
-                        <a class="{{ if or ($currentPage.IsMenuCurrent " main" .) ($currentPage.HasMenuCurrent "main" .)
-                            }}is-active{{ end }}" href="{{ .URL }}">
-                            {{ .Name }}
-                        </a>
+                    <li class="{{ if $currentPage.IsMenuCurrent .Menu . }}uk-active{{ end }}">
+                        <a href="{{ .URL }}">{{ .Name }}</a>
                         {{ if .HasChildren }}
-
-
-
-
-                        <div class="uk-navbar-dropdown uk-drop" mode="hover" pos="bottom-center" bis_skin_checked="1">
-                            <div bis_skin_checked="1">
+                        <div class="uk-navbar-dropdown uk-drop" mode="hover" pos="bottom-center">
+                            <div>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     {{ range .Children }}
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <li class="{{ if $currentPage.IsMenuCurrent .Menu . }}uk-active{{ end }}">
 
                                         {{ if .Params.external }}
-                                        <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}"
+                                        <a class="{{ if $currentPage.IsMenuCurrent " main" . }}uk-active{{ end }}"
                                             href="{{ .URL }}" rel="external" target="_blank">{{ .Name }}</a>
                                         {{ else }}
                                         <a href="{{ .URL }}">{{ .Name }}</a>
@@ -46,6 +38,8 @@
                         </div>
                         {{ end }}
                     </li>
+
+
                     {{ end }}
 
                     <li>
@@ -135,11 +129,10 @@
         <ul class="uk-nav uk-nav-default">
             {{ $currentPage := . }}
             {{- range site.Menus.main }}
-            <li>
-                <a class="{{ if or ($currentPage.IsMenuCurrent " main" .) ($currentPage.HasMenuCurrent "main" .)
-                    }}is-active{{ end }}" href="{{ .URL }}">
-                    {{ .Name }}
-                </a>
+
+
+            <li class="{{ if $currentPage.IsMenuCurrent .Menu . }}uk-active{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
                 {{ if .HasChildren }}
 
 
@@ -149,14 +142,12 @@
                     <div bis_skin_checked="1">
                         <ul class="uk-nav-sub">
                             {{ range .Children }}
-                            <li class="uk-parent">
+                            <li class="{{ if $currentPage.IsMenuCurrent .Menu . }}uk-active{{ end }}">
 
                                 {{ if .Params.external }}
-                                <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}"
-                                    href="{{ .URL }}" rel="external" target="_blank">{{ .Name }}</a>
+                                <a href="{{ .URL }}" rel="external" target="_blank">{{ .Name }}</a>
                                 {{ else }}
-                                <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}"
-                                    href="{{ .URL }}">{{ .Name }}</a>
+                                <a href="{{ .URL }}">{{ .Name }}</a>
                                 {{ end }}
                             </li>
                             {{ end }}
