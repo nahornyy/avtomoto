@@ -102,14 +102,13 @@
 
 
                             <h3 class="uk-card-title uk-margin-remove-bottom">{{ .Params.title }}</h3>
-
-
+                            
 
                         </div>
                     </div>
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label uk-label-danger">{{ time.Format ":date_short" .Params.new_date }}</div>
+                    <div class="uk-card-badge uk-label uk-label-danger uk-text-bold">{{ time.Format ":date_short" .Params.new_date }}</div>
                     <!-- <p class="uk-text-lead uk-margin-remove-top uk-text-center uk-text-primary">{{ time.Format ":date_long" .Params.new_date }}</p> -->
                     
                     <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
