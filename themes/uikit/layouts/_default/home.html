@@ -68,7 +68,7 @@
 
     </div>
 
-    <div class="uk-margin-top uk-grid-match uk-grid-small uk-child-width-1-3@m uk-child-width-1-3@l" uk-grid
+    <div class="uk-margin-top uk-grid-match uk-grid-small uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid
         uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300; repeat: true">
 
         {{ range (where .Site.Pages "Section" "classes") }}
@@ -102,19 +102,27 @@
 
 
                             <h3 class="uk-card-title uk-margin-remove-bottom">{{ .Params.title }}</h3>
-                            
+
 
                         </div>
                     </div>
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label uk-label-danger uk-text-bold">{{ time.Format ":date_short" .Params.new_date }}</div>
+                    <div class="uk-card-badge uk-label uk-label-danger uk-text-bold">{{ time.Format ":date_short"
+                        .Params.new_date }}</div>
                     <!-- <p class="uk-text-lead uk-margin-remove-top uk-text-center uk-text-primary">{{ time.Format ":date_long" .Params.new_date }}</p> -->
-                    
-                    <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
-                    <div>
-                        <progress class="uk-progress" max="24" value="{{ .Params.count}}"></progress>
+                    <div class="uk-child-width-expand@m uk-text-center" uk-grid>
+                        <div class="uk-width-auto@m">
+                            <p class="uk-text-meta">{{ T "students" }}</p>
+                        </div>
+                        <div class="uk-width-expand@m"><progress class="uk-progress" max="24"
+                                value="{{ .Params.count}}"></progress></div>
                     </div>
+                    <!-- <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+                    <div>
+
+                        <progress class="uk-progress" max="24" value="{{ .Params.count}}"></progress>
+                    </div> -->
                     <!--<p class="uk-text-muted uk-margin-remove-top uk-text-left">{{ T "date_of_studing"}}: {{ time.Format ":date_long" .Params.new_date }}</p>-->
                 </div>
                 <div class="uk-card-footer">
@@ -219,13 +227,20 @@
                     </div>
                 </div>
                 <div class="uk-card-body">
+                    <div class="uk-child-width-expand@m uk-text-center" uk-grid>
+                        <div class="uk-width-auto@m">
+                            <p class="uk-text-meta">{{ T "students" }}</p>
+                        </div>
+                        <div class="uk-width-expand@m"><progress class="uk-progress" max="24" value="5"></progress>
+                        </div>
+                    </div>
                     <!-- <div class="uk-card-badge uk-label uk-label-danger">{{ T "practic_date"}}</div> -->
-                    
+
                     <!-- <p class="uk-text-lead uk-margin-remove-top uk-text-center uk-text-primary">{{ T "practic_date"}}</p> -->
-                    <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
+                    <!-- <p class="uk-text-meta uk-text-center">{{ T "students" }}</p>
                     <div>
                         <progress class="uk-progress" max="24" value="4"></progress>
-                    </div>
+                    </div> -->
                     <!--<p class="uk-text-muted uk-margin-remove-top uk-text-left">{{ T "date_of_studing"}}: {{ T "practic_date"}}</p>-->
                 </div>
                 <div class="uk-card-footer">
