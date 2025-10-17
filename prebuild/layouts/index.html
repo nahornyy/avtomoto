@@ -132,7 +132,7 @@ site.Params.api_url) }}
 <!-- укр язык -->
 <!-- укр язык opengraph-->
 {{ with resources.GetRemote (printf
-"%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*"
+"%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*&filter[status][_eq]=true"
 site.Params.api_url) }}
 {{ $posts := unmarshal .Content }}
 
@@ -163,7 +163,7 @@ site.Params.api_url) }}
 
 <!-- рус язык opengraph-->
 {{ with resources.GetRemote (printf
-"%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*"
+"%s/items/stuff?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*&filter[status][_eq]=true"
 site.Params.api_url) }}
 {{ $posts := unmarshal .Content }}
 
