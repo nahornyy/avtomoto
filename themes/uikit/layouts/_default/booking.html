@@ -69,11 +69,16 @@
 
 
         <!-- Форма записи -->
+
+
         <div class="">
 
             <h3 class="uk-heading-divider">{{ T "reg" }}</h3>
+            <iframe style="border:none; width:100%; height: 498px;" id="{{ .Page.Params.form_id }}" src="https://form.cynic.club/forms/{{ .Page.Params.form_id }}"></iframe>
+            <script type="text/javascript" onload="initEmbed('{{ .Page.Params.form_id }}')" src="https://form.cynic.club/widgets/iframe.min.js"></script>
+            
 
-
+            <!--
             <div>
 
                 <form accept-charset="UTF-8"
@@ -106,7 +111,7 @@
                     </select>
                 </div>
             </div>
-
+            -->
             <!--
               <p>Оберіть необхідні категорії<br>
                 <span data-name="your-category"><span><label><input type="checkbox" name="your-category[]"
@@ -121,7 +126,8 @@
                     name="your-category[]" value="BE"><span
                     class="wpcf7-list-item-label">BE</span></label></span></span></span>
               </p>
-        -->
+            -->
+            <!--
             <div class="uk-margin">
                 <div class="uk-form-label">
                     <h5>Оберіть необхідні категорії</h5>
@@ -166,13 +172,15 @@
 
                 </form>
             </div>
+        -->
 
         </div>
 
 
+
     </div>
 
 
-    
-    </div>
-    {{ end }}
+
+</div>
+{{ end }}
