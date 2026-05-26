@@ -11,6 +11,7 @@ site.Params.api_url) }}
 {{ $gallery := .galley }}
 {{ $content := .translations }}
 {{ $title := 0 }}
+{{ $subtitle := 0 }}
 {{ $address := 0 }}
 {{ $day1 := 0 }}
 {{ $day2 := 0 }}
@@ -26,14 +27,17 @@ site.Params.api_url) }}
 {{ range $content }}
 {{ $title = .street }}
 {{ $address = .address }}
+
+
 {{ $day1 = .day1 }}
 {{ $day2 = .day2 }}
 {{ $day3 = .day3 }}
 {{ $comment = .comment }}
 {{ $form = .form }}
+{{ $subtitle = .sub_title }}
 
 {{ end }}
-{{ $meta := dict "slug" .slug "image" .cover "title" $title "address" $address "day1" $day1 "day2" $day2 "day3" $day3 "comment" $comment "new_date" .new_date "latitude" .latitude "longitude" .longitude "count" .count "day1_time" .day1_time "day2_time" .day2_time "day3_time" .day3_time "form" $form }}
+{{ $meta := dict "slug" .slug "image" .cover "title" $title "address" $address "day1" $day1 "day2" $day2 "day3" $day3 "comment" $comment "new_date" .new_date "latitude" .latitude "longitude" .longitude "count" .count "day1_time" .day1_time "day2_time" .day2_time "day3_time" .day3_time "form" $form "subtitle" $subtitle}}
 {{ $merged := merge $meta $gal }}
 {{ $metaJson := jsonify $merged }}
 
@@ -56,6 +60,7 @@ site.Params.api_url) }}
 {{ $gallery := .galley }}
 {{ $content := .translations }}
 {{ $title := 0 }}
+{{ $subtitle := 0 }}
 {{ $address := 0 }}
 {{ $day1 := 0 }}
 {{ $day2 := 0 }}
@@ -77,10 +82,11 @@ site.Params.api_url) }}
         {{ $day3 = .day3 }}
         {{ $comment = .comment }}
         {{ $form = .form }}
+        {{ $subtitle = .sub_title }}
 
 
     {{ end }}
-{{ $meta := dict "slug" .slug "image" .cover "title" $title "address" $address "day1" $day1 "day2" $day2 "day3" $day3 "comment" $comment "new_date" .new_date "latitude" .latitude "longitude" .longitude "count" .count "day1_time" .day1_time "day2_time" .day2_time "day3_time" .day3_time  "form" $form}}
+{{ $meta := dict "slug" .slug "image" .cover "title" $title "address" $address "day1" $day1 "day2" $day2 "day3" $day3 "comment" $comment "new_date" .new_date "latitude" .latitude "longitude" .longitude "count" .count "day1_time" .day1_time "day2_time" .day2_time "day3_time" .day3_time  "form" $form "subtitle" $subtitle }}
 {{ $merged := merge $meta $gal }}
 {{ $metaJson := jsonify $merged }}
 

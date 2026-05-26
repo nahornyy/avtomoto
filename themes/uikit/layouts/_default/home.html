@@ -76,6 +76,7 @@
         {{ range (where .Site.Pages "Section" "classes") }}
         {{ range .Pages }}
         {{ $title := .Page.Title }}
+        
         <div>
             <div class="uk-card uk-card-default uk-card-hover uk-card-small">
                 <!--<div class="uk-card-badge uk-label uk-label-danger">{{ time.Format ":date_long" .Params.new_date }}</div>-->
@@ -103,8 +104,8 @@
                         <div class="uk-width-expand">
 
 
-                            <h3 class="uk-card-title uk-margin-remove-bottom">{{ .Params.title }}</h3>
-
+                            <h3 class="uk-card-title uk-margin-remove-bottom">{{ .Params.subtitle }}</h3>
+                            <p class="uk-text-meta uk-margin-remove-top">{{ .Params.title }}</p>
 
                         </div>
                     </div>
