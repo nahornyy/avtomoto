@@ -1,12 +1,12 @@
 +++
 title = 'Privacy Policy'
-date = '2024-04-24'
+date = '2026-08-24'
 layout = 'privacy'
 +++
 
 PRIVACY POLICY
 
-Last updated April 24, 2024
+Last updated  24.08.2026
 
 
 

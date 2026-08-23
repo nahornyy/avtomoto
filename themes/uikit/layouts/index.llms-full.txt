@@ -1,0 +1,27 @@
+# {{ .Site.Title }} — Полный контент
+
+> Этот файл содержит полный текст всех материалов сайта {{ .Site.BaseURL }}.
+> **Файл сгенерирован:** {{ now.Format "2006-01-02 15:04" }}
+
+---
+
+{{ range .Site.RegularPages -}}
+# {{ .Title }}
+
+- **Ссылка:** {{ .Permalink }}
+{{- if not .Date.IsZero }}
+- **Дата публикации:** {{ .Date.Format "2006-01-02" }}
+{{- else }}
+- **Дата актуальности:** {{ now.Format "2006-01-02" }}
+{{- end }}
+{{- if .Params.tags }}
+- **Теги:** {{ delimit .Params.tags ", " }}
+{{- end }}
+
+## Содержание
+
+{{ .RawContent }}
+
+---
+
+{{ end -}}
