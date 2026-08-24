@@ -167,6 +167,12 @@ disableKinds = ["taxonomy", "term"]
 [sitemap]
   changeFreq = 'monthly'
 
+[mediaTypes."text/plain"]
+  suffixes = ["txt"]
+  delimiter = "."
+  # Гарантирует правильный заголовок в локальном сервере Hugo
+  charset = "utf-8"
+
 
 [outputFormats.LLMSTXT]
   mediaType = "text/plain"
