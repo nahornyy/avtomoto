@@ -89,6 +89,7 @@
                             {{ $key := "?key=key3"}}
                             {{ $url := print $url $file $key}}
                             {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
+                            {{ warnf "AUTH TOKEN DEBUG: %s" site.Params.api_auth }}
                             {{ with try (resources.GetRemote $url $opts)}}
                             {{ with .Err }}
                             {{ errorf "%s" . }}
