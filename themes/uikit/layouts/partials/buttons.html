@@ -4,7 +4,7 @@
 
       <div class="uk-width-1-4@m uk-grid-margin uk-first-column">
         <div class="uk-margin uk-text-center" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-          <a class="el-content uk-width-1-1 uk-button uk-button-primary uk-flex-inline uk-flex-center uk-flex-middle"
+          <a class="el-content uk-width-1-1 uk-button uk-button-primary tm-cta uk-flex-inline uk-flex-center uk-flex-middle"
             href="{{ .Site.LanguagePrefix }}/booking">
             <span class="uk-margin-small-right uk-icon" uk-icon="mail"></span>
             {{ T "reg_button"}}
@@ -20,7 +20,7 @@
       <div class="uk-width-1-4@m uk-grid-margin uk-first-column">
         {{ with .Site.GetPage "/booking_practic" }}
         <div class="uk-margin uk-text-center" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-          <a class="el-content uk-width-1-1 uk-button uk-button-primary uk-flex-inline uk-flex-center uk-flex-middle"
+          <a class="el-content uk-width-1-1 uk-button uk-button-primary tm-cta uk-flex-inline uk-flex-center uk-flex-middle"
             href="{{ .RelPermalink }}">
             <span class="uk-margin-small-right uk-icon" uk-icon="mail"></span>
             {{ .Params.button_text }}
