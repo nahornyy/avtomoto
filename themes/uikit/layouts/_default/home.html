@@ -84,22 +84,29 @@
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div class="uk-width-auto">
 
-                            {{ $url := "https://directus.cynic.club/assets/" }}
-                            {{ $file := .Params.image }}
-                            {{ $key := "?key=key3"}}
-                            {{ $url := print $url $file $key}}
-                            {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
-                            {{ warnf "AUTH TOKEN DEBUG: %s" site.Params.api_auth }}
-                            {{ with try (resources.GetRemote $url $opts)}}
-                            {{ with .Err }}
-                            {{ errorf "%s" . }}
-                            {{ else with .Value}}
-                            <img alt="{{ $title }}" class="uk-border-circle" height="{{ .Height }}" height="100"
-                                src="{{ .RelPermalink }}" width="100" width="{{ .Width }}">
-                            {{ end }}
-                            {{ else }}
-                            {{ errorf "Unable to get remote resource %q" $url }}
-                            {{ end }}
+                            {{ $baseUrl := "https://directus.cynic.club/assets/" }}
+{{ $file := .Params.image }}
+{{ $key := "?key=key3" }}
+{{ $url := print $baseUrl $file $key }}
+
+{{/* Используем $.Site.Params или site.Params для получения токена */}}
+{{ $authToken := site.Params.api_auth }}
+
+{{ $opts := dict "headers" (dict 
+    "Authorization" $authToken
+    "User-Agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+) }}
+
+{{ with try (resources.GetRemote $url $opts) }}
+    {{ with .Err }}
+        {{/* warnf выведет ошибку в консоль Vercel, но НЕ остановит сборку */}}
+        {{ warnf "Не удалось загрузить %s: %s" $url . }}
+    {{ else with .Value }}
+        <img alt="{{ $title }}" class="uk-border-circle" height="{{ .Height }}" src="{{ .RelPermalink }}" width="{{ .Width }}">
+    {{ end }}
+{{ else }}
+    {{ warnf "Не удалось получить ресурс %q" $url }}
+{{ end }}
 
                         </div>
                         <div class="uk-width-expand">
