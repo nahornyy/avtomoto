@@ -197,7 +197,91 @@ site.Params.api_url) }}
 {{ end }}
 
 
+<!-- новости -->
+<!--index-->
+
+{{ $meta := dict "head" "Новини" "title" "Новини" "description" "Майбутнім водіям" "tags" "news" }}
+{{ $output := jsonify $meta }}
+{{ $filename := printf "content/news/_index.md" }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
+
+{{ $meta := dict "head" "Новости" "title" "Новости" "description" "Будущим водителям" "tags" "news" }}
+{{ $output := jsonify $meta }}
+{{ $filename := printf "content/news/_index.ru.md" }}
+{{ $resource := resources.FromString $filename $output }}
+{{ $file := $resource.RelPermalink }}
 
 
+<!-- укр язык новости -->
+<!-- укр язык opengraph-->
+{{ $apiUrl := printf "%s/items/news?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=uk&fields=translations.*&filter[status][_eq]=true" site.Params.api_url }}
+{{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth) }}
+
+{{ with try (resources.GetRemote $apiUrl $opts) }}
+  {{ with .Err }}
+    {{ warnf "Ошибка при запросе к Directus API: %s" . }}
+  {{ else with .Value }}
+    {{ $posts := unmarshal .Content }}
+
+    {{ range $posts.data }}
+      {{ $item := . }}
+      {{ $title := "" }}
+      {{ $date := .date }}
+      {{ $content := "" }}
+
+      {{/* Извлекаем данные из перевода */}}
+      {{ range .translations }}
+        {{ $title = .title }}
+        {{ $content = .content }}
+        {{ if .date }}{{ $date = .date }}{{ end }}
+      {{ end }}
+
+      {{/* Формируем классический Markdown-файл с Front Matter (YAML) */}}
+      {{ $mdContent := printf "---\ntitle: %q\ndate: %q\nslug: %q\ntags:\n  - news\n---\n\n%s" $title $date $item.slug $content }}
+
+      {{ $filename := printf "content/news/%s.md" $item.slug }}
+      {{ $resource := resources.FromString $filename $mdContent }}
+      
+      {{/* Регистрируем ресурс, чтобы Hugo скомпилировал файл при сборке */}}
+      {{ $file := $resource.RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 
+<!-- рус язык новости -->
+<!-- рус язык opengraph-->
+{{ $apiUrl := printf "%s/items/news?fields[]=*.*&deep[translations][_filter][languages_code][_eq]=ru&fields=translations.*&filter[status][_eq]=true" site.Params.api_url }}
+{{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth) }}
+
+{{ with try (resources.GetRemote $apiUrl $opts) }}
+  {{ with .Err }}
+    {{ warnf "Ошибка при запросе к Directus API: %s" . }}
+  {{ else with .Value }}
+    {{ $posts := unmarshal .Content }}
+
+    {{ range $posts.data }}
+      {{ $item := . }}
+      {{ $title := "" }}
+      {{ $date := .date }}
+      {{ $content := "" }}
+
+      {{/* Извлекаем данные из перевода */}}
+      {{ range .translations }}
+        {{ $title = .title }}
+        {{ $content = .content }}
+        {{ if .date }}{{ $date = .date }}{{ end }}
+      {{ end }}
+
+      {{/* Формируем классический Markdown-файл с Front Matter (YAML) */}}
+      {{ $mdContent := printf "---\ntitle: %q\ndate: %q\nslug: %q\ntags:\n  - news\n---\n\n%s" $title $date $item.slug $content }}
+
+      {{ $filename := printf "content/news/%s.ru.md" $item.slug }}
+      {{ $resource := resources.FromString $filename $mdContent }}
+      
+      {{/* Регистрируем ресурс, чтобы Hugo скомпилировал файл при сборке */}}
+      {{ $file := $resource.RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}

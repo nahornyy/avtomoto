@@ -164,6 +164,10 @@ disableKinds = ["taxonomy", "term"]
     source = "prebuild/public/content/stuff"
     target = "content/stuff"
 
+  [[module.mounts]]
+    source = "prebuild/public/content/news"
+    target = "content/news"
+
 [sitemap]
   changeFreq = 'monthly'
 
