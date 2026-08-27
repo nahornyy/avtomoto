@@ -82,3 +82,10 @@ other = "месяц"
 
 [practic_date]
 other = "постоянно"
+
+
+[call]
+other = "Позвонить"
+
+[call_off]
+other = "Телефоны для обратной связи"
