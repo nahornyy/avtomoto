@@ -22,10 +22,11 @@ jobs:
           extended: true # Используйте extended-версию, если требует тема
 
       - name: Build Hugo
-        run: hugo --minify
+        run: hugo --cleanDestinationDir -s prebuild --ignoreCache && hugo  --cleanDestinationDir --minify 
 
       - name: Deploy (пример)
         run: |
           # Здесь добавьте команды для деплоя собранной папки public/
           # Например, копирование по SSH, на FTP или в продакшн-директорию
           echo "Сайт успешно собран!"
+          rsync -avzhe ssh /opt/hugo/n.avtomoto25.cn.ua/public/ root@192.168.50.105:/www/wwwroot/new.avtomoto25.cn.ua --delete
