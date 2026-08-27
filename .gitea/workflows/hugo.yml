@@ -3,7 +3,8 @@ name: Build and Deploy Hugo Site
 on:
   push:
     branches:
-      - main
+      - master
+  workflow_dispatch: # Позволяет запускать этот экшен вручную кнопкой!
 
 jobs:
   build:
