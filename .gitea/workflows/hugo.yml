@@ -1,0 +1,30 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive # Если используете темы как субмодули
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true # Используйте extended-версию, если требует тема
+
+      - name: Build Hugo
+        run: hugo --minify
+
+      - name: Deploy (пример)
+        run: |
+          # Здесь добавьте команды для деплоя собранной папки public/
+          # Например, копирование по SSH, на FTP или в продакшн-директорию
+          echo "Сайт успешно собран!"
