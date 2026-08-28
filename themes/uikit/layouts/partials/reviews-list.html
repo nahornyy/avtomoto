@@ -1,0 +1,126 @@
+<!-- Передаем код языка Hugo (например, "ru" или "uk") -->
+<meta id="page-lang" content="{{ .Language.Lang }}">
+
+
+
+
+<div class="uk-margin-large-top">
+
+
+    <!-- Индикатор загрузки UIkit -->
+    <div id="reviews-loader" class="uk-text-center uk-margin-medium">
+        <div uk-spinner="ratio: 1.5"></div>
+        <p class="uk-text-meta">Загрузка отзывов...</p>
+    </div>
+
+    <!-- Контейнер для списка отзывов -->
+    <div id="reviews-container" class="uk-grid-small uk-child-width-1-1" uk-grid>
+        <!-- Сюда JS подставит карточки -->
+    </div>
+
+    <!-- Сообщение, если отзывов пока нет -->
+    <div id="no-reviews" class="uk-alert-primary uk-margin" uk-alert style="display: none;">
+        <p>{{ T "no_reviews" }}</p>
+    </div>
+</div>
+
+<script>
+
+    // Получаем язык страницы из Hugo (ru, uk и т.д.)
+    const pageLang = document.getElementById('page-lang')?.content || document.documentElement.lang || 'uk';
+
+    // Маппинг локалей (на случай если Hugo отдает "ua" вместо стандартного "uk")
+    const localeMap = {
+        'uk': 'uk-UA',
+        'ru': 'ru-RU'
+    };
+    const currentLocale = localeMap[pageLang] || pageLang;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('reviews-container');
+        const loader = document.getElementById('reviews-loader');
+        const noReviews = document.getElementById('no-reviews');
+
+        // Определяем slug текущей страницы
+        const slugElement = document.getElementById('page_slug');
+        const currentSlug = slugElement ? slugElement.value : window.location.pathname.replace(/^\/|\/$/g, '');
+
+        // Запрос в Directus: выбираем coments, где stuff_connect = currentSlug и status = true
+        const DIRECTUS_GET_URL = `https://directus.cynic.club/items/coments?filter[stuff_connect][_eq]=${encodeURIComponent(currentSlug)}&filter[status][_eq]=true&sort=-date_created`;
+
+        // Вспомогательная функция для генерации визуальных звезд
+        function renderStars(count) {
+            const num = parseInt(count, 10) || 0;
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= num) {
+                    starsHtml += '<span class="uk-text-warning">&#9733;</span>'; // Закрашенная звезда
+                } else {
+                    starsHtml += '<span class="uk-text-muted">&#9734;</span>'; // Пустая звезда
+                }
+            }
+            return starsHtml;
+        }
+
+        try {
+            const res = await fetch(DIRECTUS_GET_URL);
+            if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+
+            const responseData = await res.json();
+            const reviews = responseData.data || [];
+
+            loader.style.display = 'none';
+
+            if (reviews.length === 0) {
+                noReviews.style.display = 'block';
+                return;
+            }
+
+            // Рендерим каждую карточку UIkit
+            reviews.forEach(item => {
+                const card = document.createElement('div');
+
+                // Внутри цикла рендеринга карточек отзывов:
+                const dateStr = item.date_created
+                    ? new Date(item.date_created).toLocaleDateString(currentLocale, {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    })
+                    : '';
+
+                card.innerHTML = `
+        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-radius-smooth">
+          <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-small-bottom">
+            <div>
+              <h4 class="uk-card-title uk-margin-remove-bottom">${escapeHtml(item.name || 'Аноним')}</h4>
+              <div class="uk-text-small uk-margin-small-top">
+                ${renderStars(item.stars)}
+              </div>
+            </div>
+            ${dateStr ? `<span class="uk-article-meta">${dateStr}</span>` : ''}
+          </div>
+          <p class="uk-margin-remove-top uk-text-break">${escapeHtml(item.comment || '')}</p>
+        </div>
+      `;
+                container.appendChild(card);
+            });
+
+        } catch (err) {
+            console.error('Ошибка загрузки отзывов:', err);
+            loader.style.display = 'none';
+            noReviews.innerText = 'Не удалось загрузить отзывы.';
+            noReviews.className = 'uk-alert-danger uk-margin';
+            noReviews.style.display = 'block';
+        }
+
+        // Защита от XSS в именах и текстах
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    });
+</script>

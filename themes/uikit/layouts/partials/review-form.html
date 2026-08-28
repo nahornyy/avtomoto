@@ -1,0 +1,102 @@
+<div class="review-form-box">
+  <form id="directus-review-form">
+    <fieldset class="uk-fieldset">
+
+      <legend class="uk-legend">{{ T "name" }}</legend>
+
+      <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="{{ T " name" }}" aria-label="Input" id="username"
+          name="username" required>
+      </div>
+
+      <legend class="uk-legend">{{ T "review" }}</legend>
+
+      <div class="uk-margin">
+        <textarea class="uk-textarea" rows="5" aria-label="Textarea" id="review" name="review" required
+          placeholder="{{ T " review" }}"></textarea>
+      </div>
+
+
+      <legend class="uk-legend">{{ T "stars"}}</legend>
+      <!-- Slug страницы Hugo -->
+      {{ $slug := .Slug | default .File.ContentBaseName }}
+      <input type="hidden" id="page_slug" name="page_slug" value="{{ $slug }}">
+
+      <div class="uk-margin">
+        <input class="uk-range" type="range" value="5" min="0" max="5" step="1" aria-label="Range" id="stars"
+          name="stars" required>
+      </div>
+
+
+
+      <div class="uk-margin">
+        <button type="submit" id="submit-btn" class="uk-button uk-button-primary">{{ T "send"}}</button>
+      </div>
+
+
+    </fieldset>
+
+  </form>
+  <div id="form-response" style="display: none; margin-top: 10px;"></div>
+</div>
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('directus-review-form');
+    const responseBox = document.getElementById('form-response');
+    const submitBtn = document.getElementById('submit-btn');
+
+    // URL вашего Directus и эндпоинта коллекции
+    const DIRECTUS_API_URL = 'https://directus.cynic.club/items/coments';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Отправка...';
+      responseBox.style.display = 'none';
+
+      // Безопасно получаем значение slug или берем путь страницы из URL
+      const slugElement = document.getElementById('page_slug');
+      const currentSlug = slugElement ? slugElement.value : window.location.pathname.replace(/^\/|\/$/g, '');
+
+      // Формируем payload с названиями полей, как в коллекции Directus
+      const payload = {
+        name: document.getElementById('username').value.trim(),
+        comment: document.getElementById('review').value.trim(),
+        stars: document.getElementById('stars').value.trim(),
+        stuff_connect: currentSlug,
+        status: 'false' // отправка на модерацию
+      };
+
+      try {
+        const res = await fetch(DIRECTUS_API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          responseBox.style.color = 'green';
+          responseBox.innerText = 'Спасибо! Ваш отзыв отправлен на модерацию.';
+          form.reset();
+        } else {
+          throw new Error(`Server returned ${res.status}`);
+        }
+      } catch (err) {
+        responseBox.style.color = 'red';
+        responseBox.innerText = 'Ошибка при отправке отзыва. Попробуйте позже.';
+        console.error('Directus submission error:', err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Отправить';
+        responseBox.style.display = 'block';
+      }
+    });
+  });
+</script>

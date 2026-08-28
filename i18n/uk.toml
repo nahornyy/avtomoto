@@ -41,6 +41,9 @@ other = "Інструктор з водіння"
 other = "Викладач автошколи"
 
 [comment]
+other = "Залишити відгук"
+
+[comments]
 other = "Відгуки про викладача"
 
 [name]
@@ -89,3 +92,28 @@ other = "Зателефонувати"
 
 [call_off]
 other = "Телефони для зворотнього зв'язку"
+
+
+[review]
+other = "Відгук"
+
+
+[stars]
+other = "Оцінка"
+
+
+[send]
+other = "Відправити"
+
+
+[reviews_loading]
+other = "Завантаження відгуків..."
+
+[no_reviews]
+other = "Поки немає жодного відгуку. Будьте першими!"
+
+[reviews_error]
+other = "Не вдалося завантажити відгуки."
+
+[anonymous_user]
+other = "Анонім"

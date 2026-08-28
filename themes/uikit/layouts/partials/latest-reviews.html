@@ -1,0 +1,142 @@
+<div class="uk-margin-large-top" 
+     id="latest-reviews-wrapper"
+     data-lang="{{ .Language.Lang }}"
+     data-error-text="{{ i18n "reviews_error" }}"
+     data-anonymous="{{ i18n "anonymous_user" }}"
+     data-btn-text="{{ T "detaled" }}"
+     data-path-prefix="{{ if eq .Language.Lang "ru" }}/ru/stuff{{ else }}/stuff{{ end }}">
+
+  <!-- Индикатор загрузки -->
+  <div id="latest-reviews-loader" class="uk-text-center uk-margin-medium">
+    <div uk-spinner="ratio: 1.5"></div>
+    <p class="uk-text-meta">{{ i18n "reviews_loading" }}</p>
+  </div>
+
+  <!-- Сетка строго в 2 столбика на десктопах (1-2@m) -->
+  <div id="latest-reviews-container" 
+       class="uk-grid-small uk-child-width-1-1 uk-child-width-1-3@m uk-grid-match" 
+       uk-grid>
+    <!-- Сюда JS вставит 20 карточек -->
+  </div>
+
+  <!-- Сообщение об отсутствии отзывов -->
+  <div id="latest-no-reviews" class="uk-alert-primary uk-margin" uk-alert style="display: none;">
+    <p>{{ i18n "no_reviews" }}</p>
+  </div>
+</div>
+
+
+<!-- СКРИПТ -->
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const wrapper = document.getElementById('latest-reviews-wrapper');
+  const container = document.getElementById('latest-reviews-container');
+  const loader = document.getElementById('latest-reviews-loader');
+  const noReviews = document.getElementById('latest-no-reviews');
+
+  if (!wrapper) return;
+
+  const pageLang = wrapper.dataset.lang || 'uk';
+  const errorText = wrapper.dataset.errorText || 'Error';
+  const anonymousText = wrapper.dataset.anonymous || 'Anonymous';
+  const goToMaterialText = {{ T "detaled" }};
+  
+  // Берем префикс путей (/ru/stuff или /stuff)
+  const pathPrefix = wrapper.dataset.pathPrefix || '/stuff';
+
+  const localeMap = { 'uk': 'uk-UA', 'ua': 'uk-UA', 'ru': 'ru-RU' };
+  const currentLocale = localeMap[pageLang] || pageLang;
+
+  // URL: без фильтра по slug, только одобренные, 20 штук, новые в начале
+  const DIRECTUS_LATEST_URL = 'https://directus.cynic.club/items/coments?filter[status][_eq]=true&sort=-date_created&limit=12';
+
+  function renderStars(count) {
+    const num = parseInt(count, 10) || 0;
+    let starsHtml = '';
+    for (let i = 1; i <= 5; i++) {
+      starsHtml += i <= num 
+        ? '<span class="uk-text-warning">&#9733;</span>' 
+        : '<span class="uk-text-muted">&#9734;</span>';
+    }
+    return starsHtml;
+  }
+
+  function truncateText(str, maxLength = 150) {
+    if (!str || str.length <= maxLength) return str;
+    const truncated = str.slice(0, maxLength).trim();
+    return truncated.replace(/\s+\S*$/, '') + '...';
+  }
+
+  try {
+    const res = await fetch(DIRECTUS_LATEST_URL);
+    if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+
+    const responseData = await res.json();
+    const reviews = responseData.data || [];
+
+    loader.style.display = 'none';
+
+    if (reviews.length === 0) {
+      noReviews.style.display = 'block';
+      return;
+    }
+
+    reviews.forEach(item => {
+      const cardWrapper = document.createElement('div');
+
+      const dateStr = item.date_created 
+        ? new Date(item.date_created).toLocaleDateString(currentLocale, { 
+            day: 'numeric', 
+            month: 'long', 
+            year: 'numeric' 
+          })
+        : '';
+
+      // Формируем корректный URL с учетом языка и очистки slug
+      let rawSlug = item.stuff_connect ? item.stuff_connect.replace(/^\/|\/$/g, '') : '';
+      rawSlug = rawSlug.replace(/^stuff\//, ''); // убираем префикс stuff/ если он есть в БД
+      
+      const pageLink = rawSlug ? `${pathPrefix}/${rawSlug}/` : '';
+
+      cardWrapper.innerHTML = `
+        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-radius-smooth uk-flex uk-flex-column uk-flex-between"
+        uk-scrollspy="cls: uk-animation-slide-right;  delay: 100; repeat: true">
+          <div>
+            <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-small-bottom">
+              <div>
+                <h4 class="uk-card-title uk-margin-remove-bottom">${escapeHtml(item.name || anonymousText)}</h4>
+                <div class="uk-text-small uk-margin-small-top">
+                  ${renderStars(item.stars)}
+                </div>
+              </div>
+              ${dateStr ? `<span class="uk-article-meta">${dateStr}</span>` : ''}
+            </div>
+            <p class="uk-margin-remove-top uk-text-break">${escapeHtml(truncateText(item.comment || '', 150))}</p>
+          </div>
+          ${pageLink ? `
+            <div class="uk-margin-small-top uk-text-right">
+              <a href="${pageLink}" class="uk-button uk-button-link uk-button-small uk-text-meta">${escapeHtml(goToMaterialText)} &rarr;</a>
+            </div>
+          ` : ''}
+        </div>
+      `;
+      container.appendChild(cardWrapper);
+    });
+
+  } catch (err) {
+    console.error('Ошибка при загрузке последних отзывов:', err);
+    loader.style.display = 'none';
+    noReviews.querySelector('p').innerText = errorText;
+    noReviews.className = 'uk-alert-danger uk-margin';
+    noReviews.style.display = 'block';
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;")
+              .replace(/'/g, "&#039;");
+  }
+});
+</script>

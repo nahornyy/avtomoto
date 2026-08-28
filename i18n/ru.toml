@@ -41,6 +41,9 @@ other = "Инструктор по вождению"
 other = "Преподаватель автошколы"
 
 [comment]
+other = "Оставить отзыв"
+
+[comments]
 other = "Отзывы о преподавателе"
 
 [name]
@@ -89,3 +92,27 @@ other = "Позвонить"
 
 [call_off]
 other = "Телефоны для обратной связи"
+
+
+[review]
+other = "Отзыв"
+
+[stars]
+other = "Оценка"
+
+
+[send]
+other = "Отправить"
+
+
+[reviews_loading]
+other = "Загрузка отзывов..."
+
+[no_reviews]
+other = "Пока нет ни одного отзыва. Будьте первыми!"
+
+[reviews_error]
+other = "Не удалось загрузить отзывы."
+
+[anonymous_user]
+other = "Аноним"

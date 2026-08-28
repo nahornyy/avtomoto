@@ -11,9 +11,9 @@
   <h1 class="uk-heading-divider">{{ .Params.title }}</h1>
   {{ $driver := .Params.tag }}
   {{ if eq $driver "driver" }}
-  <h3 class = "uk-margin-remove-top uk-text-meta">{{ T "driver" }}</h3>
+  <h3 class="uk-margin-remove-top uk-text-meta">{{ T "driver" }}</h3>
   {{else}}
-  <h3 class = "uk-margin-remove-top uk-text-meta">{{ T "teacher" }}</h3>
+  <h3 class="uk-margin-remove-top uk-text-meta">{{ T "teacher" }}</h3>
 
   {{ end }}
 
@@ -33,17 +33,19 @@
         {{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth ) }}
         {{ $img := resources.GetRemote $url $opts }}
         {{ $img := $img.Content | resources.FromString $path }}
-        <img src="{{ $img.RelPermalink }}"  alt="{{ $alt }}" >
+        <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}">
       </div>
     </div>
     <div class="uk-width-expand@m">
       <div class="">
         <h4 class="uk-heading-bullet uk-text-muted">{{ T "comment"}}</h4>
+        {{ partial "review-form.html" .}}
+        <!--
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
           <div id="remark42"></div>
-          
 
-          
+
+
           <script>
             var remark_config = {
               host: "https://remark.cynic.club",
@@ -58,6 +60,9 @@
 
 
         </div>
+        -->
+        <h4 class="uk-heading-bullet uk-text-muted">{{ T "comments"}}</h4>
+        {{ partial "reviews-list.html" . }}
       </div>
     </div>
   </div>
@@ -65,10 +70,10 @@
 
 
   {{ .Content }}
-  
-  
-  
-  
+
+
+
+
 
 </div>
 
