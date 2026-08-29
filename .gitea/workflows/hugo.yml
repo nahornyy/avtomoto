@@ -29,4 +29,16 @@ jobs:
 #          # Здесь добавьте команды для деплоя собранной папки public/
 #          # Например, копирование по SSH, на FTP или в продакшн-директорию
 #          echo "Сайт успешно собран!"
-#          rsync -avzhe ssh /opt/hugo/n.avtomoto25.cn.ua/public/ root@192.168.50.105:/www/wwwroot/new.avtomoto25.cn.ua --delete
+#          
+
+# 1. Добавляем SSH-ключ из секретов в Runner
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: unnecessary # Пропускает проверку fingerprint (для локальных IP)
+
+      # 2. Выполняем rsync
+      - name: Deploy via rsync
+        run: |
+          rsync -avzhe ssh public/ root@192.168.50.105:/www/wwwroot/new.avtomoto25.cn.ua --delete
