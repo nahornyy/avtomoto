@@ -37,6 +37,11 @@ jobs:
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: unnecessary # Пропускает проверку fingerprint (для локальных IP)
+# --- ДОБАВЛЯЕМ УСТАНОВКУ RSYNC ---
+      - name: Install rsync
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rsync
 
       # 2. Выполняем rsync
       - name: Deploy via rsync
