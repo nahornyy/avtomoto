@@ -46,4 +46,6 @@ jobs:
       # 2. Выполняем rsync
       - name: Deploy via rsync
         run: |
-          rsync -avzhe ssh public/ root@192.168.50.105:/www/wwwroot/new.avtomoto25.cn.ua --delete
+          - name: Deploy via rsync
+        run: |
+          rsync -avzhe "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" public/ root@192.168.50.105:/www/wwwroot/new.avtomoto25.cn.ua --delete
