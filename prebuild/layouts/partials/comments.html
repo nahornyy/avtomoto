@@ -1,7 +1,7 @@
 <!-- Отзывы / Комментарии -->
 
-<!-- Индексная страница раздела -->
-{{ $metaUk := "---\nhead: \"Коментарі\"\ntitle: \"Коментарі\"\ndescription: \"Коментарі наших учнів\"\ntags:\n  - comments\n---" }}
+<!-- Индексная страница раздела (отключает генерацию /comments/) -->
+{{ $metaUk := "---\ntitle: \"Коментарі\"\n_build:\n  render: never\n  list: never\n---" }}
 {{ $filenameUkIndex := "content/comments/_index.md" }}
 {{ $resourceUkIndex := resources.FromString $filenameUkIndex $metaUk }}
 {{ $fileUkIndex := $resourceUkIndex.RelPermalink }}
