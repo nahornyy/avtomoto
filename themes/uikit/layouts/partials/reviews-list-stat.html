@@ -1,0 +1,66 @@
+<div class="uk-margin-large-top">
+
+    {{/* 1. Определяем slug текущей страницы */}}
+    {{ $currentSlug := .Slug | default .File.ContentBaseName }}
+
+    {{/* 2. Находим все страницы из раздела comments */}}
+    {{ $allComments := where .Site.RegularPages "Section" "comments" }}
+    
+    {{/* Если в .md файлах стоит hidden: true, берем из AllPages */}}
+    {{ if eq (len $allComments) 0 }}
+        {{ $allComments = where (where .Site.AllPages "Section" "comments") "Kind" "page" }}
+    {{ end }}
+
+    {{/* 3. Фильтруем отзывы по stuff_connect = currentSlug */}}
+    {{ $reviews := where $allComments "Params.stuff_connect" $currentSlug }}
+
+    {{/* 4. Сортируем отфильтрованные отзывы по Params.id (от большего к меньшему) */}}
+    {{ $sortedReviews := sort $reviews "Params.id" "desc" }}
+
+    {{ if gt (len $sortedReviews) 0 }}
+        <!-- Контейнер для списка отзывов -->
+        <div id="reviews-container" class="uk-grid-small uk-child-width-1-1" uk-grid>
+            {{ range $sortedReviews }}
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-card-small uk-radius-smooth">
+                        <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-small-bottom">
+                            <div>
+                                <h4 class="uk-card-title uk-margin-remove-bottom">
+                                    {{ .Params.author | default (i18n "anonymous_user") }}
+                                </h4>
+                                
+                                {{/* Рендеринг звезд */}}
+                                <div class="uk-text-small uk-margin-small-top">
+                                    {{ $stars := int .Params.stars }}
+                                    {{ range seq $stars }}
+                                        <span class="uk-text-warning">&#9733;</span>
+                                    {{ end }}
+                                    {{ range seq (sub 5 $stars) }}
+                                        <span class="uk-text-muted">&#9734;</span>
+                                    {{ end }}
+                                </div>
+                            </div>
+                            
+                            {{/* Дата отзыва */}}
+                            <span class="uk-article-meta">
+                                {{ .Date.Format "02.01.2006" }}
+                            </span>
+                        </div>
+                        
+                        {{/* Текст отзыва */}}
+                        <div class="uk-margin-remove-top uk-text-break">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+
+    {{ else }}
+        <!-- Сообщение, если отзывов пока нет -->
+        <div class="uk-alert-primary uk-margin" uk-alert>
+            <p>{{ T "no_reviews" }}</p>
+        </div>
+    {{ end }}
+
+</div>

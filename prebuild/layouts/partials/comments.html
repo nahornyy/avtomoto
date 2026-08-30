@@ -1,0 +1,48 @@
+<!-- Отзывы / Комментарии -->
+
+<!-- Индексная страница раздела -->
+{{ $metaUk := "---\nhead: \"Коментарі\"\ntitle: \"Коментарі\"\ndescription: \"Коментарі наших учнів\"\ntags:\n  - comments\n---" }}
+{{ $filenameUkIndex := "content/comments/_index.md" }}
+{{ $resourceUkIndex := resources.FromString $filenameUkIndex $metaUk }}
+{{ $fileUkIndex := $resourceUkIndex.RelPermalink }}
+
+
+<!-- Запрос к API Directus для получения отзывов -->
+{{ $apiUrl := printf "%s/items/coments?filter[status][_eq]=true&sort=-date_created" site.Params.api_url }}
+{{ $opts := dict "headers" (dict "Authorization" site.Params.api_auth) }}
+
+{{ with try (resources.GetRemote $apiUrl $opts) }}
+  {{ with .Err }}
+    {{ warnf "Ошибка при запросе отзывов к Directus API: %s" . }}
+  {{ else with .Value }}
+    {{ $comments := unmarshal .Content }}
+
+    {{ range $comments.data }}
+      {{ $item := . }}
+      
+      {{ $name := $item.name }}
+      {{ $date := $item.date_created }}
+      {{ $commentText := $item.comment }}
+      {{ $stars := $item.stars }}
+      {{ $stuff := $item.stuff_connect }}
+      {{ $id := $item.id }}
+
+      {{/* ГЕНЕРАЦИЯ УКРАИНСКОЙ ВЕРСИИ (.md) */}}
+      {{ $titleUk := printf "Відгук від %s" $name }}
+      
+      {{/* 
+        Заменено:
+        - stars: %v (число/float)
+        - stuff_connect: %q (строка в кавычках)
+        - id: %v (уникальный ID)
+      */}}
+      {{ $mdContentUk := printf "---\ntitle: %q\ndate: %q\nauthor: %q\nstars: %v\nstuff_connect: %q\nid: %v\nhidden: true\ntags:\n  - comments\n---\n\n%s" $titleUk $date $name $stars $stuff $id $commentText }}
+
+      {{/* Имя файла создается по уникальному $id (%v), а не по $stuff */}}
+      {{ $filenameUk := printf "content/comments/%v.md" $id }}
+      {{ $resourceUk := resources.FromString $filenameUk $mdContentUk }}
+      {{ $fileUk := $resourceUk.RelPermalink }}
+
+    {{ end }}
+  {{ end }}
+{{ end }}
